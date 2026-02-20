@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="It's Not About the Cell - Blog and resources by Alex Powers">
+        <meta name="description" content="Hiding The Gridlines That Hold Us Back — Excel, Power BI, Power Query, and Microsoft Fabric">
       
       
         <meta name="author" content="Alex Powers">
@@ -50,10 +50,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/custom.css">
     
     <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -71,7 +73,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,7 +94,7 @@
     <a href="../../../../.." title="It&#39;s Not About the Cell" class="md-header__button md-logo" aria-label="It's Not About the Cell" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 2.77 1.28 1.5 22.5 22.72 21.23 24l-2-2H4c-1.08 0-2-.9-2-2V4.77zM10 4v3.68l-2-2V4H6.32l-2-2H20a2 2 0 0 1 2 2v15.7l-2-2V16h-1.68l-2-2H20v-4h-4v3.68l-2-2V10h-1.68l-2-2H14V4zm6 0v4h4V4zm0 16h1.23L16 18.77zM4 8h1.23L4 6.77zm6 6h1.23L10 12.77zm4 6v-3.23l-.77-.77H10v4zm-6 0v-4H4v4zm0-6v-3.23L7.23 10H4v4z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -122,20 +124,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
   
@@ -328,7 +330,7 @@
     <a href="../../../../.." title="It&#39;s Not About the Cell" class="md-nav__button md-logo" aria-label="It's Not About the Cell" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 2.77 1.28 1.5 22.5 22.72 21.23 24l-2-2H4c-1.08 0-2-.9-2-2V4.77zM10 4v3.68l-2-2V4H6.32l-2-2H20a2 2 0 0 1 2 2v15.7l-2-2V16h-1.68l-2-2H20v-4h-4v3.68l-2-2V10h-1.68l-2-2H14V4zm6 0v4h4V4zm0 16h1.23L16 18.77zM4 8h1.23L4 6.77zm6 6h1.23L10 12.77zm4 6v-3.23l-.77-.77H10v4zm-6 0v-4H4v4zm0-6v-3.23L7.23 10H4v4z"/></svg>
 
     </a>
     It's Not About the Cell
@@ -581,7 +583,7 @@
 <p>Data Factory in Microsoft Fabric is an AMAZING tool that allows us to combine the flexibility of Data pipelines and ease of a Dataflow Gen2 to create some nifty solutions with a <strong><em>tiny</em></strong> <em><strong>smidge</strong></em> of code. One of the most common use cases is the ability to load new data into a destination for a select period (incrementally). Below is a high-level diagram that we’ll start breaking down to copy data from a SQL Database into a Lakehouse.</p>
 <!-- more -->
 
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/IncrementalRefreshPipeline-1.png"><img alt="Picture of a completed pipeline used to incrementally load data using a Dataflow Gen2 and a Data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/IncrementalRefreshPipeline-1-1024x292.png" /></a></p>
+<p><img alt="Picture of a completed pipeline used to incrementally load data using a Dataflow Gen2 and a Data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/IncrementalRefreshPipeline-1-1024x292.png" /></p>
 <p>To get started, create a new Warehouse item and execute the below SQL query to create a stored procedure. For the purposes of this example, I’m using date only but please feel free to adjust as needed for datetime. (I’ll be highlighting why I started with date only while leveraging the world’s most popular language Power Query M a bit later…)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CREATE PROCEDURE IncrementRefresh @DateValue DATE
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>AS
@@ -597,28 +599,28 @@
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>GO;
 </code></pre></div>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/StoredProcedure.png"><img alt="Creating a stored procedure within Synapse Engineering's datawarehouse." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/StoredProcedure-1024x462.png" /></a></p>
+<p><img alt="Creating a stored procedure within Synapse Engineering's datawarehouse." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/StoredProcedure-1024x462.png" /></p>
 <p>We'll now execute our stored procedure to add a single date value into our table and view the results once complete.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>EXEC IncrementRefresh @DateValue = &#39;2018-06-01&#39;;
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>SELECT * FROM dbo.IrDate;
 </code></pre></div>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/ExecuProcedure.png"><img alt="Executing a stored procedure within Synapse Engineering's datawarehouse." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/ExecuProcedure-1024x512.png" /></a></p>
+<p><img alt="Executing a stored procedure within Synapse Engineering's datawarehouse." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/ExecuProcedure-1024x512.png" /></p>
 <p>Next, create a Dataflow Gen2 and a new query using <strong>Get data &gt; from Warehouse</strong>. Connect to the table that contains our date value and select <strong>Drill down</strong> to convert the query into a scalar value.</p>
 <p>Also, create another query using <strong>Get data &gt; from SQL Server</strong> for the table you want to setup an incremental refresh with (this could be any data source in your case, preferably one that that supports <a href="https://powerquery.microsoft.com/blog/introduction-to-practical-query-folding/">query folding</a>).</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/DrillDown.png"><img alt="Setting a drill down value with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/DrillDown-1011x1024.png" /></a></p>
+<p><img alt="Setting a drill down value with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/DrillDown-1011x1024.png" /></p>
 <p>To avoid refreshing fact tables that may take forever to complete with large volumes, we’ll go for a specific period using the date/datetime columns and set a static filter for <strong>Equals</strong>... and then jump into the formula bar for a small bit of Power Query M later.</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/DateTimeFilter.png"><img alt="Selecting equals to for a date range filter with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/DateTimeFilter-1024x590.png" /></a></p>
+<p><img alt="Selecting equals to for a date range filter with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/DateTimeFilter-1024x590.png" /></p>
 <p>Now, let’s set up a static filter for <strong>equals</strong> on the date/datetime columns in the <strong>Filter rows</strong> window. Type in any static value and select <strong>OK</strong> - we’ll update this using the scalar value from our Warehouse in the next portion.</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/EqualsDate.png"><img alt="Setting a date range filter with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/EqualsDate-1024x605.png" /></a></p>
+<p><img alt="Setting a date range filter with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/EqualsDate-1024x605.png" /></p>
 <p>To update the formula, we’ll replace the #datetime(yyyy,mm,dd,hh,mm,ss) value with the scalar value from our IrDate query and cast it to a datetime type using <a href="https://learn.microsoft.com/powerquery-m/datetime-from">DateTime.From</a> function.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Table.SelectRows(#&quot;Remove Columns&quot;, each [ModifiedDate] = DateTime.From(IrDate))
 </code></pre></div>
 <p>"I can hear you wondering why we didn’t cast it appropriately at the beginning?!" The reason is that I wanted to show you the full flexibility of adjusting your solution. If you ever need to modify this in the future, you can leverage Power Query M functions like (<a href="https://learn.microsoft.com/powerquery-m/date-isincurrentmonth">Date.IsInCurrentMonth</a>, <a href="https://learn.microsoft.com/powerquery-m/date-month">Date.Month,</a> etc.)</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/UpdatedFormula.png"><img alt="Updating a formula with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/UpdatedFormula-1024x614.png" /></a></p>
+<p><img alt="Updating a formula with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/UpdatedFormula-1024x614.png" /></p>
 <p>Now that we’ve set up our filter, there are a few more important things to do. Right-click each query and deselect the “<strong>Enable staging</strong>” option. Why? Because both the sources Warehouse and SQL Database support <a href="https://powerquery.microsoft.com/blog/introduction-to-practical-query-folding/">query fol</a><a href="https://powerquery.microsoft.com/en-us/blog/introduction-to-practical-query-folding/">d</a><a href="https://powerquery.microsoft.com/en-us/blog/introduction-to-practical-query-folding/">ing</a> - no need for all that Fabric compute to process heavy transformations since we're doing a simple WHERE equivalent, basically save them CUs! Make sure to set your destination to your Lakehouse / Warehouse (wherever you want!) by visiting <strong>Home &gt; Add data destination</strong>, and setting the update method to <strong>Append</strong> and select <strong>Publish</strong>.</p>
 <p>Of note, <strong>Publish</strong> will both publish the Dataflow and start the refresh activity, you may want to manually update the date within the Warehouse by executing the stored procedure once the dataflow refresh has completed to avoid duplication of results.</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/PerfectScreenshot.png"><img alt="Disable staging with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/PerfectScreenshot-1024x503.png" /></a></p>
+<p><img alt="Disable staging with Data Factory's Dataflow Gen2." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/PerfectScreenshot-1024x503.png" /></p>
 <p>Next, we’ll create a Data pipeline and in the bottom portion of the screen, we’ll select <strong>Variables</strong> and then <strong>New</strong> to create the three variables listed below.</p>
 <table>
 <thead>
@@ -647,30 +649,30 @@
 </tbody>
 </table>
 <p>In our example, the <strong>IncrementValue</strong> will be used to set how many days we will incrementally count by, the <strong>DateValue</strong> will be used to store the date value from our Warehouse and <strong>MaxRange</strong> to set how many days we want this to run in a single instance. (For instance, if we want to increment by 1 day with a maximum period of up thirty times, we will grab 30 days’ worth of information on pipeline run.)</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/CreateVariables.png"><img alt="Creating variables within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/CreateVariables-1024x632.png" /></a></p>
+<p><img alt="Creating variables within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/CreateVariables-1024x632.png" /></p>
 <p>Add a <strong>Script activity</strong> to the Data pipeline. In the <strong>Settings</strong> configuration, select the Warehouse name in the Data warehouse section and set the <strong>Script</strong> to <strong>Query</strong>. This will run the SQL query to obtain the date value that we previously inserted. Return to the <strong>General</strong> tab of the activity and update the title to <strong>Get Date</strong> before proceeding.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>SELECT * FROM dbo.Irdate
 </code></pre></div>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/ScriptActivity.png"><img alt="Script activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/ScriptActivity-1018x1024.png" /></a></p>
+<p><img alt="Script activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/ScriptActivity-1018x1024.png" /></p>
 <p>Using the <strong>Activities</strong> tab, insert a <strong>Set variable activity</strong>. Below the <strong>Value</strong> field, select <strong>Add dynamic content</strong> (click into the field well for it to become visible). Once in the expression builder, include the following expression which obtains the <strong>DateValue</strong> column’s first result (zero index) from our Get Date activity and select <strong>OK</strong> to close.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@activity(&#39;Get Date&#39;).output.resultSets[0].rows[0].DateValue
 </code></pre></div>
 <p>Return to the General menu and update the name of the activity to <strong>Set DateValue</strong> and drag and drop the <strong>On success</strong> conditional path from the <strong>Get Date</strong> activity to the <strong>Set DateValue</strong> activity.</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/SetDateValue.png"><img alt="Expression builder for set variable activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/SetDateValue-1024x335.png" /></a></p>
+<p><img alt="Expression builder for set variable activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/SetDateValue-1024x335.png" /></p>
 <p>Using the Activities tab, add a <strong>ForEach activity</strong> to create a loop. With the activity selected in the Items field, select <strong>Add dynamic content (</strong>click into the field well for it to become visible<strong>)</strong>. Once in the expression builder, include the following expression below for range which will use the variable <strong>MaxRange</strong> to determine how many times we should increment through our activity and select <strong>OK</strong> to close.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>@range(1,variables(&#39;MaxRange&#39;))
 </code></pre></div>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/ForEachItem-1.png"><img alt="Expression builder for the ForEach activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/ForEachItem-1-1024x445.png" /></a></p>
+<p><img alt="Expression builder for the ForEach activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/ForEachItem-1-1024x445.png" /></p>
 <p>Select the pencil from the <strong>ForEach</strong> activity to move into the sub canvas editor and from the <strong>Activities</strong> menu add a <strong>Dataflow</strong> activity. Within the Settings we’ll add the Dataflow Gen2 that we created previously from the drop-down menu and update the name to <strong>Incremental Dataflow</strong>.</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/AddDataflow.png"><img alt="Dataflow Gen2 activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/AddDataflow-1024x672.png" /></a></p>
+<p><img alt="Dataflow Gen2 activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/AddDataflow-1024x672.png" /></p>
 <p>Using the Activities tab, add a <strong>Stored procedure activity</strong>. With the activity selected in the Settings configuration, select Workspace within the Data store type and choose your Warehouse from within the drop-down list. Select the <strong>Stored procedure name</strong> that we created earlier for <strong>IncrementalRefresh</strong>. Within the Stored procedure parameters section, select <strong>Import</strong> and for the <strong>DateValue</strong>'s <strong>Value</strong> select <strong>Add dynamic content</strong> (click into the field well for it to become visible).</p>
 <p>Once in the expression builder, include this expression below to add a day to our current date based on our increment value of 1 (e.g., June 1st would then update to June 2nd and so on) and select <strong>OK</strong> to close.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>@adddays(variables(&#39;DateValue&#39;), variables(&#39;IncrementValue&#39;))
 </code></pre></div>
 <p>Once complete, update the name of the Stored procedure activity to <strong>Update date</strong>, drag and drop the <strong>On success</strong> conditional path from the <strong>Incremental Dataflow</strong> activity to the <strong>Update date</strong> activity.</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/Stored-procedure-1.png"><img alt="Expression builder for stored procedure activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/Stored-procedure-1-1024x564.png" /></a></p>
+<p><img alt="Expression builder for stored procedure activity within Data Factory's data pipeline." src="../../../../2023-10-17-change-in-the-house-of-lakes/images/Stored-procedure-1-1024x564.png" /></p>
 <p>To return to our <strong>Pipeline</strong>, select the <strong>Main canvas</strong> text from the top left. Next, navigate to the <strong>Home</strong> tab and click on <strong>Run</strong> to enjoy the beautiful incrementally loaded data! The right portion of the screenshot below shows that our original date has now been updated to June 2nd and is ready for our next run. Ideally, this should be scheduled through the <strong>Scheduler</strong> on the <strong>Home</strong> tab and in accordance with the data update cadence.</p>
-<p><a href="https://itsnotaboutthecell.com/wp-content/uploads/2023/10/SuccessPipeline.png"><img alt="A picture of a data pipeline and warehouse upon successful completion" src="../../../../2023-10-17-change-in-the-house-of-lakes/images/SuccessPipeline-1024x592.png" /></a></p>
+<p><img alt="A picture of a data pipeline and warehouse upon successful completion" src="../../../../2023-10-17-change-in-the-house-of-lakes/images/SuccessPipeline-1024x592.png" /></p>
 <p>Ok, long~ish post with a lot of pictures and a few bits of text but honestly a couple lines of SQL, a couple of activities on the Data pipeline canvas and done. Easy peezy lemon squeezy. Let me know in the comments if you put this pattern into action and how you improved upon it too!</p>
 
 
@@ -720,6 +722,8 @@
   </div>
 
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -812,8 +816,19 @@
       
       
     
-    <a href="https://bsky.app/" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
+    <a href="https://bsky.app/profile/itsnotaboutthecell.com" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3M288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5 3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7 3.3-.5 6.6-.9 10-1.4-3.3.5-6.6 1-10 1.4-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4 102.4-103.4 28.1-156-65.8-169.9-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3 64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/inthecell" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
     </a>
   
 </div>
@@ -831,7 +846,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.footer", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
