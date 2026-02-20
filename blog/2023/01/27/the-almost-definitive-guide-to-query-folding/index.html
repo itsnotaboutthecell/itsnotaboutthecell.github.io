@@ -1,0 +1,3018 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="It's Not About the Cell - Blog and resources by Alex Powers">
+      
+      
+        <meta name="author" content="Alex Powers">
+      
+      
+        <link rel="canonical" href="https://itsnotaboutthecell.com/blog/2023/01/27/the-almost-definitive-guide-to-query-folding/">
+      
+      
+        <link rel="prev" href="../../26/yo-listen/">
+      
+      
+        <link rel="next" href="../../../04/07/5-tips-for-learning-data-types-in-power-query-formula-language/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>The (Almost) Definitive Guide to Query Folding - It's Not About the Cell</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="It&#39;s Not About the Cell" class="md-header__button md-logo" aria-label="It's Not About the Cell" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            It's Not About the Cell
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The (Almost) Definitive Guide to Query Folding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../portfolio/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Portfolio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../best-excel-websites/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="It&#39;s Not About the Cell" class="md-nav__button md-logo" aria-label="It's Not About the Cell" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    It's Not About the Cell
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../portfolio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portfolio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../best-excel-websites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2023-01-27 00:00:00+00:00" class="md-ellipsis">January 27, 2023</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/power-query/">power-query</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              7 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+  <h1>The (Almost) Definitive Guide to Query Folding</h1>
+
+<p>There's only one rule. Don't break the fold! Before we start enforcing all these rules, we should start with something like a solid foundation of what does and doesn't fold in Power Query and their SQL equivalents. Now, if you found this page and we're like "what in the world is query folding?" <a href="https://powerquery.microsoft.com/en-us/blog/introduction-to-practical-query-folding/">read this incredible article, from this amazing author.</a></p>
+<!-- more -->
+
+<p><strong>The disclaimer thing:</strong> This is a personal list compiled through testing during the <a href="https://aka.ms/30dquery">30-day query folding challenge</a> either done by myself or members of the community (❤️). Every scenario is different, and every situation is unique. The functionality described in this article is subject to change and may evolve over time. Please feel free to leave comments at the end of the article or find me via the social channels to let me know of revisions.</p>
+<p><strong>About the data source:</strong> The source utilized for these scenarios was an Azure SQL Database or SQL Server. There may not be equal folding functionality within other systems, and you should always test your own solutions to determine full functionality before production use.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Supports Folding</th>
+<th>SQL Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-buffer">Binary.Buffer</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-compress">Binary.Compress</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-approximatelength">Binary.ApproximateLength</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-decompress">Binary.Decompress</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-viewerror">Binary.ViewError</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-totext">Binary.ToText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-type">Binary.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-view">Binary.View</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-viewfunction">Binary.ViewFunction</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-combine">Binary.Combine</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-tolist">Binary.ToList</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-range">Binary.Range</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-fromlist">Binary.FromList</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-length">Binary.Length</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-infercontenttype">Binary.InferContentType</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-from">Binary.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/binary-fromtext">Binary.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/byte-type">Byte.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/byte-from">Byte.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/character-fromnumber">Character.FromNumber</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/char-transact-sql">CHAR</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/character-tonumber">Character.ToNumber</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/currency-type">Currency.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/currency-from">Currency.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isleapyear">Date.IsLeapYear</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-from">Date.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-startofday">Date.StartOfDay</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-monthname">Date.MonthName</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-endofyear">Date.EndOfYear</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-endofday">Date.EndOfDay</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-daysinmonth">Date.DaysInMonth</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-endofweek">Date.EndOfWeek</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-endofquarter">Date.EndOfQuarter</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-weekofmonth">Date.WeekOfMonth</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-totext">Date.ToText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-type">Date.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-fromtext">Date.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-torecord">Date.ToRecord</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-startofquarter">Date.StartOfQuarter</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-startofmonth">Date.StartOfMonth</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-startofyear">Date.StartOfYear</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-startofweek">Date.StartOfWeek</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-dayofweekname">Date.DayOfWeekName</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datename-transact-sql">DATENAME</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isincurrentday">Date.IsInCurrentDay</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isincurrentmonth">Date.IsInCurrentMonth</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-endofmonth">Date.EndOfMonth</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/eomonth-transact-sql">EOMONTH</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-weekofyear">Date.WeekOfYear</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datepart-transact-sql">DATEPART</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-year">Date.Year</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datepart-transact-sql">DATEPART</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextday">Date.IsInNextDay</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextmonth">Date.IsInNextMonth</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isincurrentyear">Date.IsInCurrentYear</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isincurrentquarter">Date.IsInCurrentQuarter</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isincurrentweek">Date.IsInCurrentWeek</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-addweeks">Date.AddWeeks</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/dateadd-transact-sql">DATEADD</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-addyears">Date.AddYears</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/dateadd-transact-sql">DATEADD</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-addquarters">Date.AddQuarters</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/dateadd-transact-sql">DATEADD</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-adddays">Date.AddDays</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/dateadd-transact-sql">DATEADD</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-addmonths">Date.AddMonths</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/dateadd-transact-sql">DATEADD</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-month">Date.Month</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datepart-transact-sql">DATEPART</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-quarterofyear">Date.QuarterOfYear</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datepart-transact-sql">DATEPART</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-dayofyear">Date.DayOfYear</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datepart-transact-sql">DATEPART</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-day">Date.Day</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datepart-transact-sql">DATEPART</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-dayofweek">Date.DayOfWeek</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datepart-transact-sql">DATEPART</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousnquarters">Date.IsInPreviousNQuarters</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousnweeks">Date.IsInPreviousNWeeks</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousnmonths">Date.IsInPreviousNMonths</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousmonth">Date.IsInPreviousMonth</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousndays">Date.IsInPreviousNDays</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousyear">Date.IsInPreviousYear</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinyeartodate">Date.IsInYearToDate</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousweek">Date.IsInPreviousWeek</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousnyears">Date.IsInPreviousNYears</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousquarter">Date.IsInPreviousQuarter</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextnquarters">Date.IsInNextNQuarters</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextnweeks">Date.IsInNextNWeeks</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextndays">Date.IsInNextNDays</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextnmonths">Date.IsInNextNMonths</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextnyears">Date.IsInNextNYears</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinpreviousday">Date.IsInPreviousDay</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextyear">Date.IsInNextYear</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextquarter">Date.IsInNextQuarter</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/date-isinnextweek">Date.IsInNextWeek</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-fromtext">DateTime.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-type">DateTime.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinpreviousnseconds">DateTime.IsInPreviousNSeconds</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinprevioussecond">DateTime.IsInPreviousSecond</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinpreviousnminutes">DateTime.IsInPreviousNMinutes</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinpreviousminute">DateTime.IsInPreviousMinute</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinpreviousnhours">DateTime.IsInPreviousNHours</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-localnow">DateTime.LocalNow</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-time">DateTime.Time</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-torecord">DateTime.ToRecord</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-fixedlocalnow">DateTime.FixedLocalNow</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-addzone">DateTime.AddZone</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-date">DateTime.Date</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinprevioushour">DateTime.IsInPreviousHour</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isincurrentminute">DateTime.IsInCurrentMinute</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isincurrentsecond">DateTime.IsInCurrentSecond</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isincurrenthour">DateTime.IsInCurrentHour</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-from">DateTime.From</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/convert-transact-sql">CONVERT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-fromfiletime">DateTime.FromFileTime</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinnexthour">DateTime.IsInNextHour</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinnextnseconds">DateTime.IsInNextNSeconds</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinnextsecond">DateTime.IsInNextSecond</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinnextnminutes">DateTime.IsInNextNMinutes</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinnextminute">DateTime.IsInNextMinute</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-isinnextnhours">DateTime.IsInNextNHours</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetime-totext">DateTime.ToText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-toutc">DateTimeZone.ToUtc</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-totext">DateTimeZone.ToText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-zonehours">DateTimeZone.ZoneHours</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-torecord">DateTimeZone.ToRecord</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-zoneminutes">DateTimeZone.ZoneMinutes</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-removezone">DateTimeZone.RemoveZone</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-fromtext">DateTimeZone.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-switchzone">DateTimeZone.SwitchZone</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-from">DateTimeZone.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-tolocal">DateTimeZone.ToLocal</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-fixedutcnow">DateTimeZone.FixedUtcNow</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-fromfiletime">DateTimeZone.FromFileTime</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-type">DateTimeZone.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-fixedlocalnow">DateTimeZone.FixedLocalNow</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-utcnow">DateTimeZone.UtcNow</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/datetimezone-localnow">DateTimeZone.LocalNow</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/decimal-type">Decimal.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/decimal-from">Decimal.From</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/double-type">Double.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/double-from">Double.From</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/convert-transact-sql">CONVERT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-minutes">Duration.Minutes</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-type">Duration.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-totalminutes">Duration.TotalMinutes</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-totalseconds">Duration.TotalSeconds</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-totalhours">Duration.TotalHours</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-seconds">Duration.Seconds</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-torecord">Duration.ToRecord</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-totext">Duration.ToText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-days">Duration.Days</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-totaldays">Duration.TotalDays</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/datediff-transact-sql">DATEDIFF</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-from">Duration.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-hours">Duration.Hours</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/duration-fromtext">Duration.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/guid-from">Guid.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/guid-type">Guid.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int16-from">Int16.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int16-type">Int16.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int32-type">Int32.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int32-from">Int32.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int64-type">Int64.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int64-from">Int64.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int8-from">Int8.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/int8-type">Int8.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/json-fromvalue">Json.FromValue</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/json-document">Json.Document</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-singleordefault">List.SingleOrDefault</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-skip">List.Skip</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-split">List.Split</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-single">List.Single</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-replacerange">List.ReplaceRange</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-replacevalue">List.ReplaceValue</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-reverse">List.Reverse</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-standarddeviation">List.StandardDeviation</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-type">List.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-union">List.Union</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-zip">List.Zip</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-transformmany">List.TransformMany</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-sum">List.Sum</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-times">List.Times</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-transform">List.Transform</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-replacematchingitems">List.ReplaceMatchingItems</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-distinct">List.Distinct</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-durations">List.Durations</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-findtext">List.FindText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-difference">List.Difference</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-dates">List.Dates</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-datetimes">List.DateTimes</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-datetimezones">List.DateTimeZones</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-intersect">List.Intersect</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-isdistinct">List.IsDistinct</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-isempty">List.IsEmpty</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-insertrange">List.InsertRange</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-first">List.First</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-firstn">List.FirstN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-generate">List.Generate</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-covariance">List.Covariance</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-sort">List.Sort</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-accumulate">List.Accumulate</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-alltrue">List.AllTrue</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-select">List.Select</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-contains">List.Contains</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/in-transact-sql">IN</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-combine">List.Combine</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-removeitems">List.RemoveItems</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-containsall">List.ContainsAll</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-containsany">List.ContainsAny</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-count">List.Count</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-buffer">List.Buffer</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-alternate">List.Alternate</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-anytrue">List.AnyTrue</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-average">List.Average</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-last">List.Last</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-positions">List.Positions</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-product">List.Product</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-random">List.Random</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-positionofany">List.PositionOfAny</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-nonnullcount">List.NonNullCount</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-numbers">List.Numbers</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-positionof">List.PositionOf</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-removenulls">List.RemoveNulls</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-removerange">List.RemoveRange</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-repeat">List.Repeat</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-removematchingitems">List.RemoveMatchingItems</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-range">List.Range</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-removefirstn">List.RemoveFirstN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-removelastn">List.RemoveLastN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-modes">List.Modes</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-minn">List.MinN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-mode">List.Mode</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-maxn">List.MaxN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-min">List.Min</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-max">List.Max</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-lastn">List.LastN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-median">List.Median</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-matchesany">List.MatchesAny</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/list-matchesall">List.MatchesAll</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/logical-totext">Logical.ToText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/logical-fromtext">Logical.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/logical-type">Logical.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/logical-from">Logical.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/null-type">Null.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-sinh">Number.Sinh</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-sin">Number.Sin</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-type">Number.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-tanh">Number.Tanh</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-exp">Number.Exp</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/exp-transact-sql">EXP</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-rounddown">Number.RoundDown</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/floor-transact-sql">FLOOR</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-cos">Number.Cos</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/cos-transact-sql">COS</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-from">Number.From</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/convert-transact-sql">CONVERT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-totext">Number.ToText</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/convert-transact-sql">CONVERT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-power">Number.Power</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/power-transact-sql">POWER</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-round">Number.Round</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/round-transact-sql">ROUND</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-mod">Number.Mod</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/mod-transact-sql">MOD</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-log">Number.Log</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/log-transact-sql">LOG</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-log10">Number.Log10</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/log10-transact-sql">LOG10</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-epsilon">Number.Epsilon</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/4.940656458412465e-324-transact-sql">4.940656458412465E-324</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-abs">Number.Abs</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/abs-transact-sql">ABS</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-pi">Number.Pi</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-positiveinfinity">Number.PositiveInfinity</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-e">Number.E</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-atan2">Number.Atan2</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/atn2-transact-sql">ATN2</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-roundup">Number.RoundUp</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/ceiling-transact-sql">CEILING</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-atan">Number.Atan</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/atan-transact-sql">ATAN</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-acos">Number.Acos</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/acos-transact-sql">ACOS</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-asin">Number.Asin</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/asin-transact-sql">ASIN</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-sqrt">Number.Sqrt</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/sqrt-transact-sql">SQRT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-iseven">Number.IsEven</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-isnan">Number.IsNaN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-integerdivide">Number.IntegerDivide</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-factorial">Number.Factorial</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-fromtext">Number.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-negativeinfinity">Number.NegativeInfinity</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-permutations">Number.Permutations</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-nan">Number.NaN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-isodd">Number.IsOdd</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-ln">Number.Ln</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-bitwisenot">Number.BitwiseNot</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-bitwiseor">Number.BitwiseOr</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-bitwiseand">Number.BitwiseAnd</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-tan">Number.Tan</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/tan-transact-sql">TAN</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-random">Number.Random</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-combinations">Number.Combinations</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-cosh">Number.Cosh</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-bitwisexor">Number.BitwiseXor</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-bitwiseshiftleft">Number.BitwiseShiftLeft</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-bitwiseshiftright">Number.BitwiseShiftRight</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-roundtowardzero">Number.RoundTowardZero</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-randombetween">Number.RandomBetween</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-roundawayfromzero">Number.RoundAwayFromZero</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/number-sign">Number.Sign</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/percentage-type">Percentage.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/percentage-from">Percentage.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/single-type">Single.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/single-from">Single.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-column">Table.Column</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-buffer">Table.Buffer</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-transpose">Table.Transpose</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-unpivotothercolumns">Table.UnpivotOtherColumns</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-transformcolumnnames">Table.TransformColumnNames</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-addindexcolumn">Table.AddIndexColumn</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-unpivot">Table.Unpivot</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-addkey">Table.AddKey</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-alternaterows">Table.AlternateRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-aggregatetablecolumn">Table.AggregateTableColumn</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-columncount">Table.ColumnCount</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-replacematchingrows">Table.ReplaceMatchingRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-replacerelationshipidentity">Table.ReplaceRelationshipIdentity</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-replacekeys">Table.ReplaceKeys</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-addjoincolumn">Table.AddJoinColumn</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-replaceerrorvalues">Table.ReplaceErrorValues</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-transformrows">Table.TransformRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-viewfunction">Table.ViewFunction</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-transformcolumntypes">Table.TransformColumnTypes</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-replacerows">Table.ReplaceRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-tocolumns">Table.ToColumns</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-reordercolumns">Table.ReorderColumns</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-range">Table.Range</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/top-transact-sql">TOP</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-firstn">Table.FirstN</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/top-transact-sql">TOP</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-selectcolumns">Table.SelectColumns</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/select-transact-sql">SELECT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-selectrows">Table.SelectRows</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/where-transact-sql">WHERE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-repeat">Table.Repeat</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/union-all-transact-sql">UNION ALL</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-combine">Table.Combine</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/union-all-transact-sql">UNION ALL</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-distinct">Table.Distinct</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/distinct-transact-sql">DISTINCT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-replacevalue">Table.ReplaceValue</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/case-transact-sql">CASE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-prefixcolumns">Table.PrefixColumns</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-pivot">Table.Pivot</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/pivot-transact-sql">PIVOT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-sort">Table.Sort</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/order-by-transact-sql">ORDER BY</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-group">Table.Group</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/group-by-transact-sql">GROUP BY</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-addcolumn">Table.AddColumn</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-nestedjoin">Table.NestedJoin</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-join">Table.Join</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-frompartitions">Table.FromPartitions</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-renamecolumns">Table.RenameColumns</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-removecolumns">Table.RemoveColumns</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-partition">Table.Partition</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-duplicatecolumn">Table.DuplicateColumn</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-columnsoftype">Table.ColumnsOfType</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-columnnames">Table.ColumnNames</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-expandtablecolumn">Table.ExpandTableColumn</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-expandrecordcolumn">Table.ExpandRecordColumn</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-expandlistcolumn">Table.ExpandListColumn</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fuzzynestedjoin">Table.FuzzyNestedJoin</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-hascolumns">Table.HasColumns</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-insertrows">Table.InsertRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fromvalue">Table.FromValue</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fuzzygroup">Table.FuzzyGroup</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fuzzyjoin">Table.FuzzyJoin</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-isdistinct">Table.IsDistinct</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-lastn">Table.LastN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-matchesallrows">Table.MatchesAllRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-matchesanyrows">Table.MatchesAnyRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-isempty">Table.IsEmpty</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-keys">Table.Keys</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-last">Table.Last</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fromrows">Table.FromRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-demoteheaders">Table.DemoteHeaders</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-filldown">Table.FillDown</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fillup">Table.FillUp</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-contains">Table.Contains</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-containsall">Table.ContainsAll</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-containsany">Table.ContainsAny</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-filterwithdatatable">Table.FilterWithDataTable</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fromcolumns">Table.FromColumns</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fromlist">Table.FromList</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-fromrecords">Table.FromRecords</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-findtext">Table.FindText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-first">Table.First</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-firstvalue">Table.FirstValue</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-max">Table.Max</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/top-transact-sql">TOP</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-selectrowswitherrors">Table.SelectRowsWithErrors</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-singlerow">Table.SingleRow</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-skip">Table.Skip</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-reverserows">Table.ReverseRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-rowcount">Table.RowCount</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-schema">Table.Schema</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-split">Table.Split</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-torows">Table.ToRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-transformcolumns">Table.TransformColumns</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-view">Table.View</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-splitcolumn">Table.SplitColumn</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-tolist">Table.ToList</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-torecords">Table.ToRecords</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-removerowswitherrors">Table.RemoveRowsWithErrors</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-partitionvalues">Table.PartitionValues</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-positionof">Table.PositionOf</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-positionofany">Table.PositionOfAny</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-maxn">Table.MaxN</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/top-transact-sql">TOP</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-min">Table.Min</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/top-transact-sql">TOP</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-minn">Table.MinN</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/top-transact-sql">TOP</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-combinecolumns">Table.CombineColumns</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-removelastn">Table.RemoveLastN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-removematchingrows">Table.RemoveMatchingRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-removerows">Table.RemoveRows</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-profile">Table.Profile</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-promoteheaders">Table.PromoteHeaders</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/table-removefirstn">Table.RemoveFirstN</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-tobinary">Text.ToBinary</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-tolist">Text.ToList</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-splitany">Text.SplitAny</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-select">Text.Select</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-split">Text.Split</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-afterdelimiter">Text.AfterDelimiter</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-range">Text.Range</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/substring-transact-sql">SUBSTRING</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-beforedelimiter">Text.BeforeDelimiter</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-type">Text.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-betweendelimiters">Text.BetweenDelimiters</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-removerange">Text.RemoveRange</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-insert">Text.Insert</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-middle">Text.Middle</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/substring-transact-sql">SUBSTRING</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-infernumbertype">Text.InferNumberType</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-format">Text.Format</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-frombinary">Text.FromBinary</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-clean">Text.Clean</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-remove">Text.Remove</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-positionofany">Text.PositionOfAny</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-padend">Text.PadEnd</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-padstart">Text.PadStart</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-at">Text.At</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/substring-transact-sql">SUBSTRING</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-start">Text.Start</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/left-transact-sql">LEFT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-from">Text.From</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/convert-transact-sql">CONVERT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-length">Text.Length</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/len-transact-sql">LEN</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-trimstart">Text.TrimStart</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/ltrim-transact-sql">LTRIM</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-lower">Text.Lower</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/lower-transact-sql">LOWER</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-contains">Text.Contains</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/case-transact-sql">CASE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-proper">Text.Proper</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-endswith">Text.EndsWith</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/case-transact-sql">CASE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-combine">Text.Combine</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/concat-transact-sql">CONCAT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-startswith">Text.StartsWith</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/case-transact-sql">CASE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-positionof">Text.PositionOf</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/charindex-transact-sql">CHARINDEX</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-newguid">Text.NewGuid</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-repeat">Text.Repeat</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/replicate-transact-sql">REPLICATE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-replacerange">Text.ReplaceRange</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/stuff-transact-sql">STUFF</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-reverse">Text.Reverse</a></td>
+<td>FALSE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/reverse-transact-sql">REVERSE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-end">Text.End</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/right-transact-sql">RIGHT</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-replace">Text.Replace</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/replace-transact-sql">REPLACE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-trimend">Text.TrimEnd</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/rtrim-transact-sql">RTRIM</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-upper">Text.Upper</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/upper-transact-sql">UPPER</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/text-trim">Text.Trim</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/trim-transact-sql">TRIM</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-type">Time.Type</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-totext">Time.ToText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-second">Time.Second</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-torecord">Time.ToRecord</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-startofhour">Time.StartOfHour</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-fromtext">Time.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-endofhour">Time.EndOfHour</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-from">Time.From</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-hour">Time.Hour</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/time-minute">Time.Minute</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-add">Value.Add</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-compare">Value.Compare</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-divide">Value.Divide</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-multiply">Value.Multiply</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-equals">Value.Equals</a></td>
+<td>TRUE</td>
+<td><a href="https://learn.microsoft.com/sql/t-sql/functions/case-transact-sql">CASE</a></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-as">Value.As</a></td>
+<td>TRUE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-fromtext">Value.FromText</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-nullableequals">Value.NullableEquals</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-firewall">Value.Firewall</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-removemetadata">Value.RemoveMetadata</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-replacetype">Value.ReplaceType</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-replacemetadata">Value.ReplaceMetadata</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-metadata">Value.Metadata</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-is">Value.Is</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-resourceexpression">Value.ResourceExpression</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-subtract">Value.Subtract</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.microsoft.com/powerquery-m/value-nativequery">Value.NativeQuery</a></td>
+<td>FALSE</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+
+  <!-- 
+    SETUP INSTRUCTIONS:
+    1. Enable GitHub Discussions on your repo (Settings → General → Features → Discussions)
+    2. Install the Giscus app: https://github.com/apps/giscus
+    3. Go to https://giscus.app/ and configure for your repo
+    4. Replace the placeholder values below with your actual Giscus config
+  -->
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="OWNER/REPO"
+    data-repo-id="REPLACE_WITH_REPO_ID"
+    data-category="Comments"
+    data-category-id="REPLACE_WITH_CATEGORY_ID"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+  ></script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../26/yo-listen/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Yo, Listen!">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Yo, Listen!
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../04/07/5-tips-for-learning-data-types-in-power-query-formula-language/" class="md-footer__link md-footer__link--next" aria-label="Next: 5 Tips for Learning Data Types in Power Query Formula Language">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5 Tips for Learning Data Types in Power Query Formula Language
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Alex Powers
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/itsnotaboutthecell" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://bsky.app/" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3M288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5 3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7 3.3-.5 6.6-.9 10-1.4-3.3.5-6.6 1-10 1.4-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4 102.4-103.4 28.1-156-65.8-169.9-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3 64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
