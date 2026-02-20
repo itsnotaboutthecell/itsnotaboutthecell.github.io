@@ -1,0 +1,75 @@
+site_name: It's Not About the Cell
+site_url: https://itsnotaboutthecell.com
+site_author: Alex Powers
+site_description: >-
+  It's Not About the Cell - Blog and resources by Alex Powers
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    logo: material/library
+
+plugins:
+  - search
+  - blog
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Blog: blog/index.md
+  - About: about.md
+  - Portfolio: portfolio.md
+  - Resources: best-excel-websites.md
+
+extra:
+  social:
+    # Update these with your actual social links
+    - icon: fontawesome/brands/github
+      link: https://github.com/itsnotaboutthecell
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/yourhandle
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://linkedin.com/in/yourprofile
+
+copyright: Copyright &copy; 2026 Alex Powers
