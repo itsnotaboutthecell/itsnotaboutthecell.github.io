@@ -40,7 +40,7 @@ in
 
 As my great friend Microsoft Excel now shows, 256 rows were loaded with 1 error because the 256th row was outside the boundary of allowed values for 8-bit integers. However, it didn’t stop the table object from creating that row with an empty value though, as displayed by the icon in the bottom right. This same behavior is across all the Power Query hosts (Excel, Power BI, Power Apps, etc.)
 
-[![](images/Int8.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/06/Int8.png)
+![](images/Int8.png)
 
 Ok, so now exploring Dataflows Gen2 - we’re storing outputs in Delta format (parquet) and with that we have a bit more data types to work with specifically [IntegerType](https://spark.apache.org/docs/3.2.0/api/python/reference/api/pyspark.sql.types.IntegerType.html)() and [LongType](https://spark.apache.org/docs/3.2.0/api/python/reference/api/pyspark.sql.types.LongType.html)(). I wanted to see if we did anything different in this new crazy world of rich file formats with this simple code block below that adds four columns, one for each integer type and then some values across each.
 
@@ -57,7 +57,7 @@ in
 
 And with a simple **df.schema** operation in a notebook, I can see my delta table has all my columns stored as LongType() which allows that maximum value range for integers.
 
-[![](images/LongType-1024x392.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/06/LongType.png)
+![](images/LongType-1024x392.png)
 
 [People smarter than me](https://medium.com/bild-journal/pyspark-data-types-explained-feb5e6f83c43) have already written articles and I’m sure some others will leave comments on this post with more details with respect to performance and optimization and what this potentially means for your solutions long term.
 

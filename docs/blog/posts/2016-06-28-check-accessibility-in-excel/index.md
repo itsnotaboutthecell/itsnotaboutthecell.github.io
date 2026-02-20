@@ -41,7 +41,7 @@ The founding fathers of Multiplan intended that spreadsheets would be for eve
 
 * * *
 
-### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2016/06/Make-Spreadsheets-Accessible-Again.xlsx)
+### Download Workbook
 
 * * *
 
@@ -81,7 +81,7 @@ At the top of your Excel application you will find the quick access toolbar
 - Within **Additional Information** perform the **How To Fix:** steps for each of the Errors and Warnings
     - You may need to scroll down depending upon your display settings.
 
-[![Accessibility Checker Inspection Results](images/HowToFixIt.png)](http://itsnotaboutthecell.com/wp-content/uploads/2016/06/HowToFixIt.png)
+![Accessibility Checker Inspection Results](images/HowToFixIt.png)
 
 **Get That Check Mark:**
 

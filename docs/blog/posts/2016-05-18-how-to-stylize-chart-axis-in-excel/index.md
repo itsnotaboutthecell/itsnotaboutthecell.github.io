@@ -33,7 +33,7 @@ It's Dangerous To Go Alone! Take This.
 
 * * *
 
-### [DOWNLOAD WORKBOOK](http://itsnotaboutthecell.com/wp-content/uploads/2016/05/Bubblegum-Axis.xlsx)
+### DOWNLOAD WORKBOOK
 
 * * *
 
@@ -135,7 +135,7 @@ Select cell C6 and double-click the fill handle to automatically copy the formu
 - Right click on the horizontal axis of the chart and select Format Axis...
 - In Axis Options, under Axis Type, select Text Axis
 
-[![](images/BubbleGum.gif)](http://i1.wp.com/itsnotaboutthecell.com/wp-content/uploads/2016/05/BubbleGum.gif)
+![](images/BubbleGum.gif)
 
 * * *
 

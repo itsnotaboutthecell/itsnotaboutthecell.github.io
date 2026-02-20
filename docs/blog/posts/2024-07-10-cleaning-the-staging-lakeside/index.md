@@ -13,7 +13,7 @@ Dirty lakes need cleaning, simple as that - and it's no different when it comes 
 
 <!-- more -->
 
-[![Dataflows Staging Lakehouse system files](images/image.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image.png)
+![Dataflows Staging Lakehouse system files](images/image.png)
 
 * * *
 
@@ -23,7 +23,7 @@ Embracing Dataflow Gen2 without altering your approach from Dataflow Gen1 is a p
 
 "Tried and true - why change?" Ok, here's my issue: if you skip setting a data destination, the "Dataflow" connector in Power BI, Excel, and Power Apps pulls data directly from the DataflowsStagingLakehouse. This might seem small, but I consider it a significant issue. Don't believe me, check out the images and Power Query M script below, they should look familiar.
 
-[![An image showing the native query when connecting to a dataflow that does not have a destination configured.](images/image-1.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-1.png)
+![An image showing the native query when connecting to a dataflow that does not have a destination configured.](images/image-1.png)
 
 * * *
 
@@ -71,19 +71,19 @@ First let's start with our dataflow, highlighting three key components and their
 
 5. **Computed Tables**: These are the powerhouses, leveraging both the DataflowsStagingLakehouse and DataflowsStagingWarehouse. They execute large-scale data transformations using the Fabric warehouse. Note that without a specified data destination, these queries default back to the DataflowsStagingLakehouse, underscoring the importance of proper configuration.
 
-[![An image outlining the Power Query Online editor and various queries - either staged or not staged.](images/image-2.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-2.png)
+![An image outlining the Power Query Online editor and various queries - either staged or not staged.](images/image-2.png)
 
 Once the dataflow is in place, we'll manage the refresh and subsequent cleanup through a **Data pipeline**, complemented by the **Notebook** activity. Begin by integrating the dataflow activity, ensuring the correct dataflow is selected. For this scenario, I'll employ the "**On completion**" conditional path. This ensures that even if a dataflow encounters a partial failure, any successfully created tables and their data will still be removed from the underlying **DataflowsStagingLakehouse**.
 
-[![An image displaying the On completion conditional path between a dataflow and notebook activity.](images/image-3.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-3.png)
+![An image displaying the On completion conditional path between a dataflow and notebook activity.](images/image-3.png)
 
 Navigating through the Notebook's explorer, select **Data sources > Lakehouses** and then **Existing lakehouse**. In the OneLake data hub interface, use the search function with the string "StagingLakehouse." You'll encounter a multitude of lakehouses; identify the correct one for your workspace using the **Location** column and then select **Add**.
 
-[![An image of the OneLake data hub window, with items filtered that contain the text StagingLakehouse.](images/image-4.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-4.png)
+![An image of the OneLake data hub window, with items filtered that contain the text StagingLakehouse.](images/image-4.png)
 
 Once you're in the Notebook and within the Lakehouse explorer, you'll notice those system tables created for the staged queries are now visible. If you remember the queries without staging enabled are sent straight to their intended data destination, so you may not see the same number of tables in this area. To clear out the unnecessary tables though, insert the PySpark script provided below into a code block, which will purge all tables within the '**DataflowsStagingLakehouse**' schema.
 
-[![An image of the Lakehouse explorer along with staging tables.](images/image-5.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-5.png)
+![An image of the Lakehouse explorer along with staging tables.](images/image-5.png)
 
 ```
 
@@ -112,15 +112,15 @@ spark.stop()
 
 Add another activity to your data pipeline by visiting **Activities** and then selecting **Script**. Within the Settings select the **More** option to launch the Get data experience.
 
-[![An image displaying the scripting activity within a data pipeline added.](images/image-8.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-8.png)
+![An image displaying the scripting activity within a data pipeline added.](images/image-8.png)
 
 In the Get data experience select OneLake data hub, use the search function with the string "StagingWarehouse." You'll encounter a multitude of warehouses; identify the correct one for your workspace using the **Location** column and then select the correct row option to continue.
 
-[![An image displaying the DataflowsStagingWarehouse within the OneLake data hub explorer.](images/image-9.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-9.png)
+![An image displaying the DataflowsStagingWarehouse within the OneLake data hub explorer.](images/image-9.png)
 
 Within the Script activity configure the conditional path as "On completion" between the Notebook and Script activities before pasting the following code block below the image.
 
-[![An image displaying a SQL scripting box within the Script activity in a data pipeline.](images/image-10.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-10.png)
+![An image displaying a SQL scripting box within the Script activity in a data pipeline.](images/image-10.png)
 
 ```
 DECLARE @sql NVARCHAR(MAX) = '';
@@ -138,11 +138,11 @@ EXEC sp_executesql @sql;
 
 Before you run the data pipeline, conduct a thorough review to ensure that your Dataflow, Notebook, and Script activities are properly set up and ready to rock-and-roll. Once you're confident everything is ready, go ahead and **Run** the data pipeline.
 
-[![An image displaying three activities successfully completed with a data pipeline - dataflow refresh, notebook and script.](images/image-11.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-11.png)
+![An image displaying three activities successfully completed with a data pipeline - dataflow refresh, notebook and script.](images/image-11.png)
 
 After the run, a quick check back in the Lakehouse explorer within the Notebook will reveal an empty **Tables** section. And just like that, we've taken out our own garbage, thank you very much!
 
-[![An image displaying the empty Lakehouse tables section after cleaning up excess tables.](images/image-6.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/07/image-6.png)
+![An image displaying the empty Lakehouse tables section after cleaning up excess tables.](images/image-6.png)
 
 * * *
 

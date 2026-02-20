@@ -55,7 +55,7 @@ There is no such thing as "**the right time**" when it comes to developing your 
 
 * * *
 
-### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2016/01/That-Pivotal-Moment.xlsx)
+### Download Workbook
 
 * * *
 

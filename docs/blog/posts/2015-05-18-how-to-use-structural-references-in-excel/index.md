@@ -84,6 +84,6 @@ When referencing table objects in your formulas it only looks within the table o
 
 * * *
 
-> If you or someone you know, is suffering from resource limiting formulas like the one below please download the [sample workbook](http://itsnotaboutthecell.com/wp-content/uploads/2015/05/MillionDollarTable.xlsx) now -
+> If you or someone you know, is suffering from resource limiting formulas like the one below please download the sample workbook now -
 > 
 > **Example: =SUM(A:A)**

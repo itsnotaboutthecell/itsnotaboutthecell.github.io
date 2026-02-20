@@ -97,7 +97,7 @@ This is not to say that an analyst can't be a developer or that a developer can'
 
 * * *
 
-####  [DOWNLOAD WORKBOOK](http://itsnotaboutthecell.com/wp-content/uploads/2016/06/MissedConnections.xlsx)
+####  DOWNLOAD WORKBOOK
 
 * * *
 

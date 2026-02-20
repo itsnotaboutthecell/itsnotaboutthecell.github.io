@@ -101,7 +101,7 @@ Take some time and explore the different form objects. Don't get frustrated if 
 
 Now that we're done nerding out on the technical jargon for a bit, let's bring all the time traveling, MIN, MAX, and EOMONTH talk full-circle.
 
-We're going to go back to our [last lesson](http://itsnotaboutthecell.com/2015/06/10/mad-maximum-value/) with the Mad Maximum [workbook](http://itsnotaboutthecell.com/wp-content/uploads/2015/06/Illusion-of-Movement.xlsx) and invoke some [time travel](http://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/) logic along the way.
+We're going to go back to our [last lesson](http://itsnotaboutthecell.com/2015/06/10/mad-maximum-value/) with the Mad Maximum workbook and invoke some [time travel](http://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/) logic along the way.
 
 **Describe It - Nested Function:**
 

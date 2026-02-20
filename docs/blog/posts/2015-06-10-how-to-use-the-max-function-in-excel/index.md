@@ -28,7 +28,7 @@ Great workbooks stand the test of time. This is a fact. The more you continue to
 
 We're jumping right into some of that learning, so for now, [enjoy](https://www.youtube.com/watch?v=SHoNWwhzh3M) this lesson.
 
-[Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2015/06/Mad-Maximum-Value.xlsx)
+Download Workbook
 
 Function: **EOMONTH**
 

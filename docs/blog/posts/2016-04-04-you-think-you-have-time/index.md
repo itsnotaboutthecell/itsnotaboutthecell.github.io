@@ -27,7 +27,7 @@ With every passing second of every minute, of every hour - you are in a constant
 
 * * *
 
-#### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2016/04/Time.xlsx)
+#### Download Workbook
 
 * * *
 

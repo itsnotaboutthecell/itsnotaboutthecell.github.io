@@ -147,7 +147,7 @@ I've been going on and on about these dang errors, so how about we find our sou
     - **Trace Dependents** to view all cells that dependent upon the cell value.
         - **Pro Tip:** Ctrl + \]
 
-[![TraceErrors](images/TraceErrors.png)](http://itsnotaboutthecell.com/wp-content/uploads/2015/09/TraceErrors.png)3\. **Leave No Trace**
+![TraceErrors](images/TraceErrors.png)3\. **Leave No Trace**
 
 - Once you are done auditing your workbook you can select **Remove Arrows** to eliminate all worksheet tracing elements.
 

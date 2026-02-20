@@ -41,7 +41,7 @@ comments: true
 
 * * *
 
-[Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2016/02/SUMSUMIFS.xlsx)
+Download Workbook
 
 * * *
 

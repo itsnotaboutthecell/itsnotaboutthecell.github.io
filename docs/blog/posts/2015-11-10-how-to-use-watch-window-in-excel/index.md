@@ -20,7 +20,7 @@ In a world of instant gratification and "I need this done yesterday," it's diff
 
 <!-- more -->
 
-[![watchwindow](images/watchwindow.png)](http://itsnotaboutthecell.com/wp-content/uploads/2015/11/watchwindow.png)
+![watchwindow](images/watchwindow.png)
 
 * * *
 

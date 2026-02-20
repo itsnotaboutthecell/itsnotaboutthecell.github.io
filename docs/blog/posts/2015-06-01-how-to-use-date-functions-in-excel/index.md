@@ -56,7 +56,7 @@ Listen, I know you can figure [some things](https://www.youtube.com/watch?v=28vE
 
 * * *
 
-Let's make a little magic - download the sample [workbook](http://itsnotaboutthecell.com/wp-content/uploads/2016/01/DateValue.xlsx).
+Let's make a little magic - download the sample workbook.
 
 In both exercises below, we are going to look at the relative positioning of our cells and utilize "AutoFill" to create cascading values so that any time you update the "Date Value" cell, the spreadsheet will update accordingly.
 

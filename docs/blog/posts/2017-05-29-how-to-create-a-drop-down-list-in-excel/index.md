@@ -35,7 +35,7 @@ Being the [115th](http://powerspreadsheets.com/excel-resources-list/) ranked ge
 
 * * *
 
-### [**DOWNLOAD WORKBOOK**](http://itsnotaboutthecell.com/wp-content/uploads/2017/05/Ranking-Movie-Sequels.xlsx)
+### **DOWNLOAD WORKBOOK**
 
 * * *
 

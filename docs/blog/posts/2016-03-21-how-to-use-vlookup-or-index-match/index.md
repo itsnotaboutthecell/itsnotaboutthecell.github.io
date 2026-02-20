@@ -33,7 +33,7 @@ Not since the great territory battles of [7-Eleven Vs. Quiktrip](http://www.ci
 
 <!-- more -->
 
-### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2016/03/GreatDivide.xlsx)
+### Download Workbook
 
  
 

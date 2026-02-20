@@ -48,7 +48,7 @@ It started out innocently: every year needed its own tab, then every month, the
 
 * * *
 
-#### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2015/11/Inquiring-Minds.xlsx)
+#### Download Workbook
 
 * * *
 
@@ -78,7 +78,7 @@ The picture below shows the starting cell and its interconnectivity with differe
 - The cells **(January!B24, February!B24 & March!B24**) are all precedents of **F3**.
 - If we go one layer deeper we can see that the previous ranges are all precedents to the ranges (**January!B2:B23, February!B2:B23 & March!B2:B23**).
 
-[![Inquire Cell Relationship](images/InquireCellRelationship.png)](http://itsnotaboutthecell.com/wp-content/uploads/2015/11/InquireCellRelationship.png)
+![Inquire Cell Relationship](images/InquireCellRelationship.png)
 
 This is an incredibly powerful feature for reviewing the downstream impacts of change and getting a true glimpse of your work's composition.
 
@@ -113,11 +113,11 @@ This is an incredibly powerful feature for reviewing the downstream impacts o
 
 More interesting things that the **Inquire** add-in now empowers you to do:
 
-[Worksheet Relationship](http://itsnotaboutthecell.com/wp-content/uploads/2015/11/InquireWorksheet.png)
+[Worksheet Relationship](images/InquireWorksheet.png)
 
 - Show the starting worksheet and how it connects with other worksheets
 
-[Workbook Relationship](http://itsnotaboutthecell.com/wp-content/uploads/2015/11/Workbook-Relationship-Inquire.png)
+[Workbook Relationship](images/Workbook-Relationship-Inquire.png)
 
 - Show the starting workbook and how it connects with external workbooks
 

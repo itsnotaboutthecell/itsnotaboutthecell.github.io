@@ -2,39 +2,47 @@ site_name: It's Not About the Cell
 site_url: https://itsnotaboutthecell.com
 site_author: Alex Powers
 site_description: >-
-  It's Not About the Cell - Blog and resources by Alex Powers
+  Hiding The Gridlines That Hold Us Back — Excel, Power BI, Power Query, and Microsoft Fabric
 
 theme:
   name: material
   custom_dir: overrides
   features:
     - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.footer
+    - navigation.instant
+    - navigation.tracking
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
+    - content.tabs.link
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep orange
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Switch to light mode
+  font:
+    text: Inter
+    code: Fira Code
   icon:
-    logo: material/library
+    logo: material/grid-off
 
 plugins:
   - search
-  - blog
+  - blog:
+      blog_toc: true
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -52,6 +60,9 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Home: index.md
@@ -62,14 +73,14 @@ nav:
 
 extra:
   social:
-    # Update these with your actual social links
     - icon: fontawesome/brands/github
       link: https://github.com/itsnotaboutthecell
     - icon: fontawesome/brands/bluesky
-      link: https://bsky.app/
-    # - icon: fontawesome/brands/twitter
-    #   link: https://twitter.com/yourhandle
-    # - icon: fontawesome/brands/linkedin
-    #   link: https://linkedin.com/in/yourprofile
+      link: https://bsky.app/profile/itsnotaboutthecell.com
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/inthecell
+
+extra_css:
+  - stylesheets/custom.css
 
 copyright: Copyright &copy; 2026 Alex Powers

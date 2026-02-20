@@ -37,7 +37,7 @@ Information is not an argument, it's a conversation.  As a developer, having th
 
 * * *
 
-#### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2015/05/The-Best-Truth-Is-Data.xlsx)
+#### Download Workbook
 
 * * *
 

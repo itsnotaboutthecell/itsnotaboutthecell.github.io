@@ -23,7 +23,7 @@ As the war wages on between **#TEAMVLOOKUP** and **#TEAMINDEXMATCH,** a new cha
 
 <!-- more -->
 
-#### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2017/12/SUMPRODUCT.xlsx)
+#### Download Workbook
 
  
 

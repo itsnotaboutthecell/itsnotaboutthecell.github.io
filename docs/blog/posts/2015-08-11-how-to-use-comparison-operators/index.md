@@ -118,4 +118,4 @@ Function: **IF**
 > 
 > Winston Churchill
 
-Practice, practice, practice. That feeling of being somewhat overwhelmed is called being on the verge of a breakthrough. Start building your own formulas using the comparison operators above with this lessons [test workbook](http://itsnotaboutthecell.com/wp-content/uploads/2015/08/We-Need-to-Talk.xlsx). If you want, you can get real crazy with it and research how to build even more advanced [nested if formulas](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nested+if+formulas).
+Practice, practice, practice. That feeling of being somewhat overwhelmed is called being on the verge of a breakthrough. Start building your own formulas using the comparison operators above with this lessons test workbook. If you want, you can get real crazy with it and research how to build even more advanced [nested if formulas](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=nested+if+formulas).

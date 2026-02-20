@@ -39,7 +39,7 @@ If repetition is the key to mastery, repeating an activity the wrong way is a 
 
 * * *
 
-#### [DOWNLOAD WORKBOOK](http://itsnotaboutthecell.com/wp-content/uploads/2016/11/AllFiller.xlsx)
+#### DOWNLOAD WORKBOOK
 
 * * *
 
@@ -182,11 +182,11 @@ These are all neat little tricks, you say, but for the love of all that is holy 
 
 **But Why?!**
 
-Data entry and manipulation is a necessary evil. **FACT.** I told you the distance between using Excel and mastering Excel is not long. Let's put this in perspective for extracting domains. You can either create a nested function with a combination of **RIGHT, LEN, FIND**, or just type a couple entries and allow Flash Fill to do the heavy lifting. But hey what do I know? I'm just a Microsoft Office Excel [2010](http://itsnotaboutthecell.com/wp-content/uploads/2015/05/Cert21961021910.pdf) Specialist and a [2010](http://itsnotaboutthecell.com/wp-content/uploads/2015/05/Cert2796937690.pdf) and [2013](http://itsnotaboutthecell.com/wp-content/uploads/2016/11/Excel-Expert-2013.pdf) Expert ([Why aren't you certified as a MOS yet](https://www.microsoft.com/en-us/learning/mos-expert-certification.aspx)?).
+Data entry and manipulation is a necessary evil. **FACT.** I told you the distance between using Excel and mastering Excel is not long. Let's put this in perspective for extracting domains. You can either create a nested function with a combination of **RIGHT, LEN, FIND**, or just type a couple entries and allow Flash Fill to do the heavy lifting. But hey what do I know? I'm just a Microsoft Office Excel 2010 Specialist and a 2010 and 2013 Expert ([Why aren't you certified as a MOS yet](https://www.microsoft.com/en-us/learning/mos-expert-certification.aspx)?).
 
 - **\=RIGHT(\[@\[E-mail\]\],LEN(\[@\[E-mail\]\])-FIND("@",\[@\[E-mail\]\],1))**
 
-[![Flash Fill](images/FlashFill.gif)](http://itsnotaboutthecell.com/wp-content/uploads/2016/11/FlashFill.gif)
+![Flash Fill](images/FlashFill.gif)
 
 * * *
 
@@ -199,7 +199,7 @@ Do not tell your boss, mailman or the family pet because this next trick will bl
 - Within the right-hand corner of the active cell press, **right-click and hold (CRAZY RIGHT?!)** and drag to desired height
     - You will notice fill options as well as Flash Fill are available using this method
 
-[![Flash Fill Right Click](images/RightClick.gif)](http://itsnotaboutthecell.com/wp-content/uploads/2016/11/RightClick.gif)
+![Flash Fill Right Click](images/RightClick.gif)
 
 **Pro Tip:**
 

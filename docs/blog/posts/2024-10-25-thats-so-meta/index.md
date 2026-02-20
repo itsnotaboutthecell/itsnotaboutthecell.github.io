@@ -46,17 +46,17 @@ in
 
 Nothing special, just a boring ole three-row table. The important thing, though, is that we took our "Original table" which is of type table and replaced it with an updated definition from the #"Metadata update" which is of type table \[ along with tons of metadata definitions enclosed within these cool square brackets \]. This was achieved using the [Value.ReplaceType](https://learn.microsoft.com/powerquery-m/value-replacetype) function.
 
-[![](images/image-2.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/10/image-2.png)
+![](images/image-2.png)
 
 "But where's the descriptions?!" I can hear you shouting at the monitor. Hold on, I mentioned earlier "_Wouldn't it be nice_?" - that means I found a way... so please, the P is for Patience. Just one~ish or so more steps.
 
-[![](images/image-3.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/10/image-3.png)
+![](images/image-3.png)
 
 ## Script it
 
 From Power BI, navigate to the External tools tab, so we can launch into everyone's favorite external tool Tabular Editor. If you don't already have it installed, follow my tutorial over at [https://aka.ms/pbiworkshops](https://aka.ms/pbiworkshops) in the Tabular Editor in an Hour folder, it's an amazing tool and my incoherent ramblings for this article won't do it justice.
 
-[![](images/image-4.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/10/image-4.png)
+![](images/image-4.png)
 
 Once connected to our semantic model, select the C# tab (see image below) and paste the script provided below the image also. While this script "**_works_**", I'm sure someone will undoubtedly write a better version. When that happens, I'll update it to version 2 and give credit to the individual who beat GPT, after my numerous failed attempts to finally get this built. Also, I know someone will write this into Semantic Link Labs too, so I'll post there when it gets updated.
 
@@ -64,7 +64,7 @@ The key here is that we are targeting the \[Name\] and \[Description\] fields wi
 
 Once ready, press the green play button and LFG!!!
 
-[![](images/image-6.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/10/image-6.png)
+![](images/image-6.png)
 
 ```
 // This script retrieves the M expression for all partitions in the model
@@ -122,10 +122,10 @@ foreach (var table in Model.Tables)
 
 And just like that, our column has been updated to reflect the underlying metadata defined in our Power Query M expression. As you share solutions like Dims and Facts across your organization, this can be a great way to ensure consistency in design and descriptions. Pretty neat, huh?
 
-[![](images/image-7.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/10/image-7.png)
+![](images/image-7.png)
 
 Of course, I'd love to see this as a native capability in the product, especially with Power Query Online's schema view interface. Imagine a Description field where you can click into each column and write a quick summary. Heck let's even make Copilot do it, they love documenting stuff (documenting is borrrrring)! Or, if you connect to a source that has these stored in a system table, automatically importing them and injecting them into your scripts.
 
-[![](images/image-8.png)](https://itsnotaboutthecell.com/wp-content/uploads/2024/10/image-8.png)
+![](images/image-8.png)
 
 The M-agination is limitless when it comes to this stuff.

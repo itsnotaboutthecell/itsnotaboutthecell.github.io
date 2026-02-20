@@ -20,7 +20,7 @@ And one of my favorites and most eye-catching ways have been through the use of 
 
 <figure>
 
-[![](images/AdaptiveCard-1-1024x763.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/AdaptiveCard-1.png)
+![](images/AdaptiveCard-1-1024x763.png)
 
 <figcaption>
 
@@ -58,7 +58,7 @@ Ok, now that we have a basic understanding of what an adaptive card "is" - let's
 
 ... ok we get it; adaptive cards can be pretty useful so let's start building our own already that will look like the below image when done.
 
-[![An adaptive card for Power BI blog announcements](images/AdaptiveCard.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/AdaptiveCard.png)
+![An adaptive card for Power BI blog announcements](images/AdaptiveCard.png)
 
 * * *
 
@@ -68,7 +68,7 @@ Ok, now that we have a basic understanding of what an adaptive card "is" - let's
 
 We'll start by navigating to [Power Automate](https://powerautomate.microsoft.com) and the left navigation menu's **My flows** option. Within the **Flows** screen at the top, we'll select **New** **flow** and **Automated cloud flow** to create an event driven flow.
 
-[![Creating a New flow within Power Automate](images/NewFlow-1.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/NewFlow-1.png)
+![Creating a New flow within Power Automate](images/NewFlow-1.png)
 
 Within the **Build an automated cloud flow** dialog window complete the fields below and select **Create** once done.
 
@@ -76,7 +76,7 @@ Within the **Build an automated cloud flow** dialog window complete the fields b
 
 - **Choose your flow’s trigger:** When a feed item is published (RSS)
 
-[![The Build an automated cloud flow window with the RSS trigger](images/AutomatedFlowName-1024x599.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/AutomatedFlowName.png)
+![The Build an automated cloud flow window with the RSS trigger](images/AutomatedFlowName-1024x599.png)
 
 Within the flow designer we’ll expand our first action **When a feed item is published** and edit the below properties:
 
@@ -84,23 +84,23 @@ Within the flow designer we’ll expand our first action **When a feed item is p
 
 - **Chosen property will be used to determine:** PublishDate
 
-[![RSS feed URL field value](images/RSSFeedURL-1024x253.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/RSSFeedURL.png)
+![RSS feed URL field value](images/RSSFeedURL-1024x253.png)
 
 After our **When a feed item is published** action, we'll select the **New step** option.
 
-[![Adding a new step within Power Automate](images/RSSNewStep-1024x214.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/RSSNewStep.png)
+![Adding a new step within Power Automate](images/RSSNewStep-1024x214.png)
 
 Within the **Choose an operation** window search for **compose** and select the **Compose (Data Operation)** action.
 
 **Pro-tip:** Compose is the single greatest action ever, period, full stop - it preserves formatting so if you have highly stylized code, which I often find is the case whenever developing robust solutions involving code like HTML/CSS or in this example a JSON payload.
 
-[![Selecting the Compose Data Operation action](images/ComposeOperation-1024x805.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/ComposeOperation.png)
+![Selecting the Compose Data Operation action](images/ComposeOperation-1024x805.png)
 
 Now within the **Compose** action copy and paste the Code payload JSON into the **Inputs** field.
 
 The code is below the image (and it's kind of long(ish)...).
 
-[![The compose action with formatted code](images/Compose-1024x991.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/Compose.png)
+![The compose action with formatted code](images/Compose-1024x991.png)
 
 **Code payload**
 
@@ -168,11 +168,11 @@ The code is below the image (and it's kind of long(ish)...).
 
 And to collapse individual actions, we'll select the header text **Compose** (in this example) and select the **New step** option once again to add one last action to our flow.
 
-[![Adding a new step within Power Automate](images/CollapsedCompose-1-1024x377.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/CollapsedCompose-1.png)
+![Adding a new step within Power Automate](images/CollapsedCompose-1-1024x377.png)
 
 Within the **Choose an operation** window search for **adaptive** and select the **Post adaptive card in a chat or channel (Microsoft Teams)** action.
 
-[![Selecting the Post adaptive card in a chat or channel (Microsoft Teams) action](images/AdaptiveAction-865x1024.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/AdaptiveAction.png)
+![Selecting the Post adaptive card in a chat or channel (Microsoft Teams) action](images/AdaptiveAction-865x1024.png)
 
 Within the **Post adaptive card in a chat or channel** action we'll complete the following values:
 
@@ -186,11 +186,11 @@ Within the **Post adaptive card in a chat or channel** action we'll complete the
 
 - **Adaptive Card:** Select the value field and the dynamic content menu will pop-up. We can now select the **Outputs** value from our earlier **Compose** action (the thing will all the cool, highly stylized JSON that was so easy to just copy and paste)
 
-[![Adding dynamic content to the post adaptive card action](images/ComposeOutputs-1024x667.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/ComposeOutputs.png)
+![Adding dynamic content to the post adaptive card action](images/ComposeOutputs-1024x667.png)
 
 And one last step and the most important one of them all... select **Save** and were done. Now whenever new posts get made to the Power BI blog we will automatically post new adaptive card notifications into our favorite Teams channel.
 
-[![Selecting the save button with the flow.](images/SaveFlow-1024x715.png)](https://itsnotaboutthecell.com/wp-content/uploads/2023/01/SaveFlow.png)
+![Selecting the save button with the flow.](images/SaveFlow-1024x715.png)
 
 * * *
 

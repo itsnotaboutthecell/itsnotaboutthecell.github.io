@@ -36,7 +36,7 @@ Analysts estimate anywhere from 50-80% of their time is dedicated to cleansing i
 
 * * *
 
-#### [Download Workbook](http://itsnotaboutthecell.com/wp-content/uploads/2016/04/Love-It-Or-List-It.xlsx)
+#### Download Workbook
 
 * * *
 
