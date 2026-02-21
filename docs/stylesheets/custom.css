@@ -79,7 +79,7 @@
   display: block;
 }
 
-/* ---- Blog post metadata: stack above content, not as left column ---- */
+/* ---- Blog post metadata: single line under title ---- */
 .md-content--post {
   display: flex;
   flex-direction: column;
@@ -102,47 +102,59 @@
   position: static;
 }
 
-.md-sidebar--post .md-post__back {
-  display: none;
+/* Hide back link, "Metadata" heading, and nav chrome */
+.md-sidebar--post .md-post__back,
+.md-sidebar--post .md-post__title {
+  display: none !important;
 }
 
-.md-sidebar--post .md-post__title {
-  display: none;
+/* Flatten the entire metadata nav into a single inline row */
+.md-sidebar--post .md-nav--primary {
+  display: block;
 }
 
 .md-sidebar--post .md-post__meta {
-  display: flex !important;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  display: inline !important;
   padding: 0;
-  margin: 0 0 2rem;
+  margin: 0;
+  list-style: none;
+}
+
+.md-sidebar--post .md-post__meta .md-nav__item--section {
+  display: inline;
+  list-style: none;
+}
+
+.md-sidebar--post .md-post__meta .md-nav__item--section > nav,
+.md-sidebar--post .md-post__meta .md-nav__item--section > nav > .md-nav__list {
+  display: inline;
+}
+
+.md-sidebar--post .md-post__meta .md-nav__item {
+  display: inline;
+  list-style: none;
+}
+
+/* The actual date and reading time links */
+.md-sidebar--post .md-post__meta .md-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Separator between date and reading time */
+.md-sidebar--post .md-post__meta .md-nav__list .md-nav__item + .md-nav__item::before {
+  content: "·";
+  margin: 0 0.5rem;
   opacity: 0.6;
   font-size: 0.8rem;
 }
 
-.md-sidebar--post .md-post__meta .md-nav__item--section > nav {
-  display: contents;
-}
-
-.md-sidebar--post .md-post__meta .md-nav__list {
-  display: contents;
-}
-
-.md-sidebar--post .md-post__meta .md-nav__item {
-  list-style: none;
-}
-
-.md-sidebar--post .md-post__meta .md-nav__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0;
-}
-
 .md-sidebar--post .md-post__meta .md-nav__link svg {
-  width: 1rem;
-  height: 1rem;
+  display: none;
 }
 
 /* ---- Blog post listing ---- */
