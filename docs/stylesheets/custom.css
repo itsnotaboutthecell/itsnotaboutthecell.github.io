@@ -38,15 +38,29 @@
   text-transform: none;
 }
 
-/* ---- Hide page-level h1 headers ---- */
-.md-content h1 {
+/* ---- Hide page-level h1 on non-post pages ---- */
+.md-content > .md-typeset > h1,
+.md-content > .md-content__inner > h1 {
   display: none;
 }
 
-/* Keep h1 visible inside blog post articles */
-.md-post h1,
-.md-post__content h1 {
+/* ---- Blog post: show title, move metadata under it ---- */
+.md-post--single h1 {
+  display: block !important;
+  text-align: center;
+  margin-bottom: 0.25em;
+}
+
+/* Move post metadata under the title */
+.md-post--single .md-post__meta {
   display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Hide "back to index" link on blog posts */
+.md-post--single .md-post__back {
+  display: none;
 }
 
 /* ---- Content width ---- */

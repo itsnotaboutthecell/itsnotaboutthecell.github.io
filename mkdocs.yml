@@ -44,6 +44,8 @@ plugins:
   - blog:
       blog_dir: .
       blog_toc: true
+      archive: false
+      categories: false
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -67,9 +69,9 @@ markdown_extensions:
 
 nav:
   - Blog: index.md
-  - About: about.md
   - Resources: best-excel-websites.md
   - Portfolio: portfolio.md
+  - About: about.md
 
 extra:
   social:
