@@ -476,7 +476,7 @@
 <ol>
 <li>Within the Power Query Online editor, select the <strong>Home</strong> tab and then the <strong>Options</strong> &gt; <strong>Global options</strong> property. </li>
 </ol>
-<p><img alt="Global options in the Options Submenu in the Home tab of the Power Query ribbon" src="images/image-2.png" /></p>
+<p><img alt="Global options in the Options Submenu in the Home tab of the Power Query ribbon" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-2.png" /></p>
 <ol>
 <li>Within the <strong>Global options</strong> window ensure the following settings are enabled and select <strong>OK</strong> once complete. </li>
 </ol>
@@ -489,7 +489,7 @@
 <p>Show script in step callout </p>
 </li>
 </ol>
-<p><img alt="Global options view within Power Query Online, with Enable query folding indicators and Show script in step callout enabled" src="images/image-3.png" /></p>
+<p><img alt="Global options view within Power Query Online, with Enable query folding indicators and Show script in step callout enabled" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-3.png" /></p>
 <p>See <a href="https://docs.microsoft.com/power-query/step-folding-indicators">query folding indicators</a> for more details. </p>
 <h2 id="ensure-folding-queries-for-efficient-data-processing">Ensure folding queries for efficient data processing<a class="headerlink" href="#ensure-folding-queries-for-efficient-data-processing" title="Permanent link">&para;</a></h2>
 <p>When connecting to various data sources within the Database, Azure, or Online services categories within Power Query, we often may need to extract large volumes of data and for this we should only extract the necessary columns and rows needed for our projects requirements.  </p>
@@ -497,7 +497,7 @@
 <ol>
 <li>From the <strong>Home</strong> tab, we’ll select the <strong>Choose columns</strong> option to deselect the unnecessary columns within our Customer table. This will ensure that we only bring in the necessary and check marked columns. </li>
 </ol>
-<p><img alt="The Choose columns dialog box, with columns disabled." src="images/image-4.png" /></p>
+<p><img alt="The Choose columns dialog box, with columns disabled." src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-4.png" /></p>
 <ol>
 <li>
 <p>Within the <strong>Query settings</strong> pane and in our <strong>Applied steps</strong> list the <strong>Choose columns</strong> step includes the <strong>Folding</strong> indicator. If we were to hover above the individual step name we’d get some additional information, including:</p>
@@ -511,19 +511,19 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Step name, folding indicator and script step information displayed on hover from the Applied steps list" src="images/image-23.png" /></p>
+<p><img alt="Step name, folding indicator and script step information displayed on hover from the Applied steps list" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-23.png" /></p>
 <ol>
 <li>From the <strong>Transform</strong> tab, we’ll select the <strong>Merge columns</strong> option to combine our customers’ name fields into a new column titled Full Name using the <strong>Space</strong> separator to make it easier for others to read. </li>
 </ol>
-<p><img alt="Merge columns dialog box to concatenate multiple fields into a full name" src="images/image-5-1024x554.png" /></p>
+<p><img alt="Merge columns dialog box to concatenate multiple fields into a full name" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-5-1024x554.png" /></p>
 <ol>
 <li>With the CompanyName column selected from the <strong>Home</strong> tab, we’ll select the <strong>Filter rows</strong> option to only return the necessary rows within our Customer table. In the <strong>Filter rows</strong> window, we’ll update the filtering options to <strong>contains</strong> and <strong>or</strong> – and within the value fields enter “Bike” and “Cycle” as our filtering criteria. </li>
 </ol>
-<p><img alt="Filter rows dialog box, to find rows where Bike or Cycle are present within text" src="images/image-6-1024x616.png" /></p>
+<p><img alt="Filter rows dialog box, to find rows where Bike or Cycle are present within text" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-6-1024x616.png" /></p>
 <ol>
 <li>In the <strong>Query settings</strong> pane’s <strong>Applied steps</strong> list, our <strong>Folding</strong> step indicator now includes the <strong>Choose columns</strong>, <strong>Merged columns</strong> and <strong>Filtered rows</strong> steps. If we were to right-click any of these steps, we can then navigate to the <strong>View data source query</strong> option to view our transformations written in the data source’s query language. </li>
 </ol>
-<p><img alt="Folding indicator icon spanning multiple steps and the View data source query option" src="images/image-10.png" /></p>
+<p><img alt="Folding indicator icon spanning multiple steps and the View data source query option" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-10.png" /></p>
 <ol>
 <li>
 <p>In the <strong>Data source query</strong> window is a read-only view of the SQL statement that will be sent to our data source, including our transformation steps:</p>
@@ -540,30 +540,30 @@
 </ul>
 </li>
 </ol>
-<p><img alt="Data source query window, displaying the generated SQL statement" src="images/image-9.png" /></p>
+<p><img alt="Data source query window, displaying the generated SQL statement" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-9.png" /></p>
 <h2 id="leverage-folding-indicators-and-query-plans-in-a-development-workflow">Leverage folding indicators and query plans in a development workflow<a class="headerlink" href="#leverage-folding-indicators-and-query-plans-in-a-development-workflow" title="Permanent link">&para;</a></h2>
 <p>As demonstrated above, we didn’t write a single line of code to query our Azure SQL database and our transformations were instantly translated into the data source’s querying language. To ensure that we can achieve optimal performance with our queries let’s continue to explore our data using some common transformation steps below. </p>
 <ol>
 <li>With the SalesPerson column selected, from the <strong>Transform</strong> tab, we’ll select the <strong>Split column</strong>, <strong>By delimiter</strong> option to extract only the sales person’s user name.  </li>
 </ol>
-<p><img alt="Split columns dialog window, separating a columns value by the backslash character" src="images/image-12-1024x689.png" /></p>
+<p><img alt="Split columns dialog window, separating a columns value by the backslash character" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-12-1024x689.png" /></p>
 <ol>
 <li>With the active selection of the SalesPerson.1 column, from the <strong>Home</strong> tab, we’ll select the <strong>Remove columns</strong> option to remove this unnecessary column from our table. </li>
 </ol>
-<p><img alt="Remove columns option from the ribbon" src="images/image-13-1024x536.png" /></p>
+<p><img alt="Remove columns option from the ribbon" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-13-1024x536.png" /></p>
 <ol>
 <li>We’ll now right click the SalesPerson.2 column and select the <strong>Rename…</strong> option to change the column’s name from SalesPerson.2 to SalesPerson. </li>
 </ol>
-<p><img alt="Rename function as displayed when right-clicking a column header" src="images/image-14.png" /></p>
+<p><img alt="Rename function as displayed when right-clicking a column header" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-14.png" /></p>
 <ol>
 <li>Within the <strong>Query settings</strong> pane and in our <strong>Applied steps</strong> list, our step indicator now displays the <strong>Not Folding</strong> icon for our <strong>Split column by delimiter</strong>, <strong>Removed columns</strong> and <strong>Renamed columns</strong> steps. This has resulted in our query being partially folded, with certain steps being completed by the remote data source and other steps being streamed into Power Query’s transformation engine. </li>
 </ol>
-<p><img alt="A not folding indicator within the Applied steps list" src="images/image-20.png" /></p>
+<p><img alt="A not folding indicator within the Applied steps list" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-20.png" /></p>
 <p>This process of partial folding ensures that as a citizen data integrator, you won’t be blocked from completing your work – though there could be downstream impacts such as increased refresh durations, which is why we’ll want to revisit our steps and find a more optimal and performant method to maintain our query folding. </p>
 <ol>
 <li>To learn more about which steps are being handled remotely and which are being streamed into Power Query, right click the <strong>Renamed columns</strong> step, and then select the <strong>View query plan</strong> option. </li>
 </ol>
-<p><img alt="View query plan option when right clicking a step within the Applied steps window" src="images/image-21.png" /></p>
+<p><img alt="View query plan option when right clicking a step within the Applied steps window" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-21.png" /></p>
 <ol>
 <li>
 <p>Within the <strong>Query plan</strong> window, from right to left we see the various stages of building our query with the labels <strong>Remote</strong> and <strong>Streaming</strong>, including the option to <strong>View details</strong> to review more information.</p>
@@ -578,23 +578,23 @@
 </li>
 </ol>
 <p>See <a href="https://docs.microsoft.com/power-query/query-plan#identify-folded-nodes-from-other-nodes">Query plan for Power Query</a> for more details.</p>
-<p><img alt="Query plan dialog window, displaying Remote and Streaming operations, including the ability to View details for more information" src="images/image-22.png" /></p>
+<p><img alt="Query plan dialog window, displaying Remote and Streaming operations, including the ability to View details for more information" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-22.png" /></p>
 <ol>
 <li>Now that we have a better idea of our costly operations, we’ll return to the <strong>Query settings</strong> pane’s <strong>Applied steps</strong> section and right click the <strong>Split column by delimiter</strong> step and then the <strong>Delete until end</strong> option to remove all our non-foldable transformations.</li>
 </ol>
-<p><img alt="Delete until end option from the Applied steps window to remove multiple steps" src="images/image-16.png" /></p>
+<p><img alt="Delete until end option from the Applied steps window to remove multiple steps" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-16.png" /></p>
 <ol>
 <li>From the <strong>Transform</strong> tab, select the <strong>Replace values</strong> option and within the <strong>Value to find</strong> field we’ll enter the text “adventure-works\”.</li>
 </ol>
-<p><img alt="Replace values option from the ribbon" src="images/image-17-1024x536.png" /></p>
+<p><img alt="Replace values option from the ribbon" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-17-1024x536.png" /></p>
 <ol>
 <li>In the <strong>Query settings</strong> pane’s <strong>Applied steps</strong> list, our step indicator now displays the <strong>Folding</strong> icon for all our steps, all while still achieving the same result that we attempted above.</li>
 </ol>
-<p><img alt="Folding indicator spanning multiple steps, including the description on hover that This step will be evaluated by the data source" src="images/image-18-1024x256.png" /></p>
+<p><img alt="Folding indicator spanning multiple steps, including the description on hover that This step will be evaluated by the data source" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-18-1024x256.png" /></p>
 <ol>
 <li>If we were to right click the <strong>Replaced value</strong> step and select the <strong>View query plan</strong> option, all our operations are now being handled remotely once again and when selecting the <strong>View details</strong> below <strong>Value.NativeQuery</strong> our query now includes the <a href="https://docs.microsoft.com/sql/t-sql/functions/replace-transact-sql">REPLACE</a> function.</li>
 </ol>
-<p><img alt="Query plan dialog window and the Native Query that has now been generated" src="images/image-19.png" /></p>
+<p><img alt="Query plan dialog window and the Native Query that has now been generated" src="../../../../2025-08-16-introduction-to-practical-query-folding/images/image-19.png" /></p>
 <p>As project requirements change with time, it’s important that we maintain query folding for our most intense operations and aim to only break query folding when no other options may exist. For this reason, we should aim to achieve the above query plan with remote operations and understand that project requirements may dictate where we may need to deviate from this goal.</p>
 <p>See <a href="https://docs.microsoft.com/power-query/best-practices#do-expensive-operations-last">Best practices when working with Power Query</a> for more details.</p>
 <p><strong>Important note:</strong> Query folding capabilities rely on both the capabilities of the data source and the connector in use. Foldable operations from a given data source and connector might not translate directly to a different data source and/or different connector.</p>
