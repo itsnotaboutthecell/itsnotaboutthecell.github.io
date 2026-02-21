@@ -1,0 +1,34 @@
+{#-
+  Override: include page title in TOC
+-#}
+{% set title = lang.t("toc") %}
+{% if config.mdx_configs.toc and config.mdx_configs.toc.title %}
+  {% set title = config.mdx_configs.toc.title %}
+{% endif %}
+<nav class="md-nav md-nav--secondary" aria-label="{{ title | e }}">
+  {% set toc_ = page.toc %}
+  {% set first = toc_ | first %}
+  {% if first and first.level == 1 %}
+    {% set toc_children = first.children %}
+  {% else %}
+    {% set toc_children = toc_ %}
+  {% endif %}
+  {% if toc_children or page.title %}
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      {{ title }}
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      {% if page.title %}
+        <li class="md-nav__item">
+          <a href="#" class="md-nav__link md-nav__link--title">
+            <span class="md-ellipsis">{{ page.title }}</span>
+          </a>
+        </li>
+      {% endif %}
+      {% for toc_item in toc_children %}
+        {% include "partials/toc-item.html" %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+</nav>

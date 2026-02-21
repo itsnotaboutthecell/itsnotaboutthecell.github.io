@@ -1,0 +1,37 @@
+{#-
+  Override: hide metadata sidebar, inject date/readtime inline under title
+-#}
+{% extends "main.html" %}
+{% block container %}
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner md-typeset">
+      {% block content %}
+        {% include "partials/tags.html" %}
+        {% include "partials/actions.html" %}
+        {% if "<h1" not in page.content %}
+          <h1>{{ page.title | d(config.site_name, true)}}</h1>
+        {% endif %}
+        <div class="md-post-meta-inline">
+          <time datetime="{{ page.config.date.created }}">
+            {{- page.config.date.created | date -}}
+          </time>
+          {% if page.config.readtime %}
+            {% set time = page.config.readtime %}
+            <span class="md-post-meta-sep">&middot;</span>
+            <span>
+              {% if time == 1 %}
+                {{ lang.t("readtime.one") }}
+              {% else %}
+                {{ lang.t("readtime.other") | replace("#", time) }}
+              {% endif %}
+            </span>
+          {% endif %}
+        </div>
+        {{ page.content }}
+        {% include "partials/source-file.html" %}
+        {% include "partials/feedback.html" %}
+        {% include "partials/comments.html" %}
+      {% endblock %}
+    </article>
+  </div>
+{% endblock %}

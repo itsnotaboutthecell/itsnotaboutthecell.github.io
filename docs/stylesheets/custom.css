@@ -79,82 +79,25 @@
   display: block;
 }
 
-/* ---- Blog post metadata: single line under title ---- */
-.md-content--post {
-  display: flex;
-  flex-direction: column;
-}
-
-.md-sidebar--post {
-  width: 100% !important;
-  max-width: 100% !important;
-  position: static !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.md-sidebar--post .md-sidebar__scrollwrap {
-  overflow: visible;
-}
-
-.md-sidebar--post .md-sidebar__inner {
-  position: static;
-}
-
-/* Hide back link, "Metadata" heading, and nav chrome */
-.md-sidebar--post .md-post__back,
-.md-sidebar--post .md-post__title {
-  display: none !important;
-}
-
-/* Flatten the entire metadata nav into a single inline row */
-.md-sidebar--post .md-nav--primary {
-  display: block;
-}
-
-.md-sidebar--post .md-post__meta {
-  display: inline !important;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.md-sidebar--post .md-post__meta .md-nav__item--section {
-  display: inline;
-  list-style: none;
-}
-
-.md-sidebar--post .md-post__meta .md-nav__item--section > nav,
-.md-sidebar--post .md-post__meta .md-nav__item--section > nav > .md-nav__list {
-  display: inline;
-}
-
-.md-sidebar--post .md-post__meta .md-nav__item {
-  display: inline;
-  list-style: none;
-}
-
-/* The actual date and reading time links */
-.md-sidebar--post .md-post__meta .md-nav__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0;
-  font-size: 0.8rem;
-  opacity: 0.6;
-}
-
-/* Separator between date and reading time */
-.md-sidebar--post .md-post__meta .md-nav__list .md-nav__item + .md-nav__item::before {
-  content: "·";
-  margin: 0 0.5rem;
+/* ---- Inline metadata under blog post title ---- */
+.md-post-meta-inline {
   opacity: 0.6;
   font-size: 0.8rem;
+  margin: -1.5rem 0 2rem;
 }
 
-.md-sidebar--post .md-post__meta .md-nav__link svg {
+.md-post-meta-sep {
+  margin: 0 0.4rem;
+}
+
+/* ---- Hide h1 on static (non-blog) pages ---- */
+.md-content:not(.md-content--post) .md-content__inner > h1:first-of-type {
   display: none;
+}
+
+/* ---- TOC title entry styling ---- */
+.md-nav__link--title {
+  font-weight: 600;
 }
 
 /* ---- Blog post listing ---- */
@@ -207,11 +150,6 @@
 }
 
 /* ---- Blog post single page ---- */
-
-/* Hide "Back to index" link */
-.md-post__back {
-  display: none;
-}
 
 /* ---- Links ---- */
 .md-typeset a {
