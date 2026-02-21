@@ -69,15 +69,25 @@
   border-bottom: 2px solid #fff;
 }
 
-/* ---- Hide left nav sidebar ---- */
-.md-sidebar--primary {
-  display: none !important;
+/* ---- Hide left nav sidebar on desktop (tabs handle navigation) ---- */
+/* Keep it available on mobile so the hamburger menu shows Home / About */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    display: none !important;
+  }
 }
 
-/* ---- Show right TOC sidebar (desktop only; let Material hide on mobile) ---- */
+/* ---- Show right TOC sidebar on desktop only ---- */
 @media screen and (min-width: 76.25em) {
   .md-sidebar--secondary {
     display: block;
+  }
+}
+
+/* ---- Hide TOC sidebar on mobile / tablet ---- */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar--secondary {
+    display: none !important;
   }
 }
 
