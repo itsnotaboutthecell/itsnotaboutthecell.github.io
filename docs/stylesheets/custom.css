@@ -184,6 +184,11 @@
   background-color: #1a1a1a;
 }
 
+/* Previous/Next nav titles uppercase */
+.md-footer__link .md-footer__title .md-ellipsis {
+  text-transform: uppercase;
+}
+
 /* ---- Hide edit button ---- */
 .md-content__button {
   display: none;

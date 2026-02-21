@@ -81,7 +81,11 @@ extra:
     - icon: fontawesome/brands/bluesky
       link: https://bsky.app/profile/itsnotaboutthecell.com
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/inthecell
+      link: https://linkedin.com/in/alexmpowers
+    - icon: fontawesome/brands/reddit
+      link: https://reddit.com/u/itsnotaboutthecell
+    - icon: fontawesome/brands/youtube
+      link: https://youtube.com/c/itsnotaboutthecell
 
 extra_css:
   - stylesheets/custom.css
