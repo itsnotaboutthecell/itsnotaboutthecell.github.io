@@ -11,7 +11,7 @@
   --md-typeset-a-color: #81699b;
 }
 
-/* ---- Light scheme overrides ---- */
+/* ---- Light scheme ---- */
 [data-md-color-scheme="default"] {
   --md-accent-fg-color: #81699b;
   --md-typeset-a-color: #81699b;
@@ -19,9 +19,9 @@
 
 /* ---- Typography ---- */
 .md-typeset {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .md-typeset h1,
@@ -30,37 +30,12 @@
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
 .md-typeset h3 {
   text-transform: none;
-}
-
-/* ---- Hide page-level h1 on non-post pages ---- */
-.md-content > .md-typeset > h1,
-.md-content > .md-content__inner > h1 {
-  display: none;
-}
-
-/* ---- Blog post: show title, move metadata under it ---- */
-.md-post--single h1 {
-  display: block !important;
-  text-align: center;
-  margin-bottom: 0.25em;
-}
-
-/* Move post metadata under the title */
-.md-post--single .md-post__meta {
-  display: block;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Hide "back to index" link on blog posts */
-.md-post--single .md-post__back {
-  display: none;
 }
 
 /* ---- Content width ---- */
@@ -73,34 +48,25 @@
   background-color: #222;
 }
 
-/* ---- Tabs: active underline ---- */
+/* ---- Tabs ---- */
 .md-tabs {
   background-color: #222;
 }
 
 .md-tabs__link {
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.7;
 }
 
 .md-tabs__item--active .md-tabs__link {
-  font-weight: 700;
+  font-weight: 600;
   opacity: 1;
   border-bottom: 2px solid #fff;
 }
 
-/* ---- Hide left nav sidebar site-wide ---- */
-@media screen and (min-width: 76.25em) {
-  .md-sidebar--primary {
-    display: none;
-  }
-}
-
-/* ---- Hide right TOC sidebar, stack inline ---- */
-@media screen and (min-width: 60em) {
-  .md-sidebar--secondary {
-    display: none;
-  }
+/* ---- Hide BOTH sidebars site-wide ---- */
+.md-sidebar {
+  display: none !important;
 }
 
 /* ---- Blog post listing ---- */
@@ -117,7 +83,7 @@
 .md-post h1 a {
   color: var(--md-default-fg-color) !important;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .md-post__content h2 a:hover,
@@ -125,7 +91,7 @@
   color: #81699b !important;
 }
 
-/* "Continue reading" styled like WP "Read more" button */
+/* "Continue reading" button */
 .md-post__action .md-button,
 .md-post__action a {
   display: inline-block;
@@ -133,7 +99,7 @@
   border: 2px solid var(--md-default-fg-color--light);
   color: var(--md-default-fg-color) !important;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   text-align: center;
@@ -146,16 +112,30 @@
   color: var(--md-default-bg-color) !important;
 }
 
-/* Post meta */
+/* Post meta on listing */
 .md-post__meta {
   opacity: 0.54;
   text-align: center;
 }
 
+/* ---- Blog post single page ---- */
+
+/* Hide "Back to index" link */
+a[href*=".."].md-nav__link,
+.md-post__back,
+nav.md-nav--secondary .md-nav__title {
+  display: none;
+}
+
+/* Hide metadata sidebar section */
+.md-post__meta.md-nav__list {
+  display: none;
+}
+
 /* ---- Links ---- */
 .md-typeset a {
   color: #81699b;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .md-typeset a:hover {
@@ -188,13 +168,4 @@
 /* ---- Hide edit button ---- */
 .md-content__button {
   display: none;
-}
-
-/* ---- Nav links ---- */
-.md-nav__link {
-  font-weight: 300;
-}
-
-.md-nav__link--active {
-  font-weight: 700;
 }
