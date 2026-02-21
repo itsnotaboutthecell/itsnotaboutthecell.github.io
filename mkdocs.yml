@@ -1,4 +1,4 @@
-site_name: It's Not About the Cell
+site_name: IT'S NOT ABOUT THE CELL
 site_url: https://itsnotaboutthecell.com
 site_author: Alex Powers
 site_description: >-
@@ -19,13 +19,6 @@ theme:
     - content.code.annotate
     - content.tabs.link
   palette:
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: purple
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: black
@@ -33,6 +26,13 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
   font:
     text: Lato
     code: Fira Code
@@ -68,8 +68,8 @@ markdown_extensions:
 nav:
   - Blog: index.md
   - About: about.md
-  - Portfolio: portfolio.md
   - Resources: best-excel-websites.md
+  - Portfolio: portfolio.md
 
 extra:
   social:

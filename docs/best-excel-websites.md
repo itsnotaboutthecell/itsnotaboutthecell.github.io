@@ -1,6 +1,9 @@
 ---
 title: "Resources"
 date: 2015-10-31
+hide:
+  - navigation
+  - toc
 ---
 
 Most people have posters of [Muhammad Ali](https://s3.amazonaws.com/rapgenius/tumblr_lryw5nTmQC1r34zkwo1_500.jpg), [Wayne Gretzky](https://bestpracticelife.files.wordpress.com/2014/10/you-miss-100-of-the-shots-you-dont-take-blog-photo.jpg) or [Ric Flair](https://s-media-cache-ak0.pinimg.com/736x/05/b2/35/05b235f539ae5a5acc15c73ee86acc3e.jpg) hanging on their walls to provide them inspiration, I have posters of the following Excel contributors' spreadsheets.

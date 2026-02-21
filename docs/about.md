@@ -1,10 +1,9 @@
 ---
 title: About
 hide:
+  - navigation
   - toc
 ---
-
-# About
 
 **My years and years of mistakes are now your fortunes.**
 
