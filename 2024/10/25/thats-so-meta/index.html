@@ -455,12 +455,21 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          <a href="#" class="md-nav__link md-nav__link--title">
+            <span class="md-ellipsis">That's So Meta</span>
+          </a>
+        </li>
+      
       
         <li class="md-nav__item">
   <a href="#straight-to-the-advanced-editor" class="md-nav__link">
@@ -494,72 +503,29 @@
           
           
   <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../.." class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-10-25 00:00:00+00:00" class="md-ellipsis">October 25, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              5 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-            
-          </nav>
-          
-        </div>
-      </div>
-    </div>
     <article class="md-content__inner md-typeset">
       
         
   
 
 
-
-
-  <h1>That's So Meta</h1>
-
-<p>I don't know about you, but my goodness, wouldn't it be great to press <strong>Close &amp; Apply</strong> on Power Query and instantly have all of your columns documented in your model based on metadata definitions in your query? And shoot, why stop there? Let's just leave the column titles exactly as they are from the original source system for easier tracking with our lineage but update to friendlier display names while in the semantic model. It almost sounds too good to be true!</p>
+        
+        
+          <h1>That's So Meta</h1>
+        
+        <div class="md-post-meta-inline">
+          <time datetime="2024-10-25 00:00:00+00:00">October 25, 2024</time>
+          
+            
+            <span class="md-post-meta-sep">&middot;</span>
+            <span>
+              
+                5 min read
+              
+            </span>
+          
+        </div>
+        <p>I don't know about you, but my goodness, wouldn't it be great to press <strong>Close &amp; Apply</strong> on Power Query and instantly have all of your columns documented in your model based on metadata definitions in your query? And shoot, why stop there? Let's just leave the column titles exactly as they are from the original source system for easier tracking with our lineage but update to friendlier display names while in the semantic model. It almost sounds too good to be true!</p>
 <!-- more -->
 
 <p>Well then let's begin with a straightforward query using everyone's favorite language, Power Query M. In this example, we'll first create a table and then set some metadata properties for both a Name and a Description within the table. You can name these properties anything you like, but for the sake of this example, we'll use the format Documentation.[Property] - you can call these <strong>WHATEVER</strong> you want, but I'm trying to instill recommended practices between you, me and everyone on the internet.</p>
@@ -661,7 +627,7 @@
 <p>Of course, I'd love to see this as a native capability in the product, especially with Power Query Online's schema view interface. Imagine a Description field where you can click into each column and write a quick summary. Heck let's even make Copilot do it, they love documenting stuff (documenting is borrrrring)! Or, if you connect to a source that has these stored in a system table, automatically importing them and injecting them into your scripts.</p>
 <p><img alt="" src="../../../../2024-10-25-thats-so-meta/images/image-8.png" /></p>
 <p>The M-agination is limitless when it comes to this stuff.</p>
-
+        
 
 
 
@@ -672,12 +638,12 @@
   
 
 
-
+        
 
   
 
 
-
+        
   <h2 id="__comments">Comments</h2>
 
   <!-- 

@@ -453,12 +453,21 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          <a href="#" class="md-nav__link md-nav__link--title">
+            <span class="md-ellipsis">Introduction to practical Query folding</span>
+          </a>
+        </li>
+      
       
         <li class="md-nav__item">
   <a href="#configure-global-options-in-power-query-online" class="md-nav__link">
@@ -514,72 +523,29 @@
           
           
   <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../.." class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-08-16 00:00:00+00:00" class="md-ellipsis">August 16, 2025</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              8 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-            
-          </nav>
-          
-        </div>
-      </div>
-    </div>
     <article class="md-content__inner md-typeset">
       
         
   
 
 
-
-
-  <h1>Introduction to practical Query folding</h1>
-
-<p>One of the most powerful capabilities of Power Query and the M Language is Query Folding (also referred to as query delegation, and predicate push-down). Query Folding allows the Power Query Mashup Engine to <strong>push the transformations expressed in an M (mashup) query to the data source, in the data source’s query language</strong>, resulting in more efficient data processing.</p>
+        
+        
+          <h1>Introduction to practical Query folding</h1>
+        
+        <div class="md-post-meta-inline">
+          <time datetime="2025-08-16 00:00:00+00:00">August 16, 2025</time>
+          
+            
+            <span class="md-post-meta-sep">&middot;</span>
+            <span>
+              
+                8 min read
+              
+            </span>
+          
+        </div>
+        <p>One of the most powerful capabilities of Power Query and the M Language is Query Folding (also referred to as query delegation, and predicate push-down). Query Folding allows the Power Query Mashup Engine to <strong>push the transformations expressed in an M (mashup) query to the data source, in the data source’s query language</strong>, resulting in more efficient data processing.</p>
 <!-- more -->
 
 <p>For inexperienced database technology users this ability to leverage the graphical user interface of Power Query to dynamically generate a query written in the data source’s query language unlocks enormous opportunities to find insights with any data, at any scale.</p>
@@ -725,7 +691,7 @@
 <p><strong>Important note:</strong> Query folding capabilities rely on both the capabilities of the data source and the connector in use. Foldable operations from a given data source and connector might not translate directly to a different data source and/or different connector.</p>
 <h2 id="continue-your-journey">Continue your journey<a class="headerlink" href="#continue-your-journey" title="Permanent link">&para;</a></h2>
 <p>Thank you for taking the time to learn more about one of my favorite topics in Query folding, as a citizen data integrator myself – the trial and error of trying different methods to build performant queries and leveraging the modern development experiences within Power Query have unlocked many scenarios I once thought impossible. It all starts with one simple rule though – “Don’t break the fold!” – which is where if you’re in the initial stages of learning, I’d encourage you to check out the <a href="https://www.youtube.com/playlist?list=PLKW7XPyNDgRCorKNS1bfZoAO3YSIAVz3N">30-Day Query Folding</a> challenge and use the hashtag #30DQUERY on social networks to share your own solutions and learn from others.</p>
-
+        
 
 
 
@@ -736,12 +702,12 @@
   
 
 
-
+        
 
   
 
 
-
+        
   <h2 id="__comments">Comments</h2>
 
   <!-- 

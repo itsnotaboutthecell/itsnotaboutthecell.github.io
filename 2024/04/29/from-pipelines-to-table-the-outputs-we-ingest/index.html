@@ -450,6 +450,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          <a href="#" class="md-nav__link md-nav__link--title">
+            <span class="md-ellipsis">From Pipelines to Table: The Outputs We Ingest</span>
+          </a>
+        </li>
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -459,72 +476,29 @@
           
           
   <div class="md-content md-content--post" data-md-component="content">
-    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../.." class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
-            
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-04-29 00:00:00+00:00" class="md-ellipsis">April 29, 2024</time>
-                      </div>
-                    </li>
-                    
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              4 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
-              </li>
-            </ul>
-            
-          </nav>
-          
-        </div>
-      </div>
-    </div>
     <article class="md-content__inner md-typeset">
       
         
   
 
 
-
-
-  <h1>From Pipelines to Table: The Outputs We Ingest</h1>
-
-<p>If it’s important, you should probably be logging it. With KQL Databases and the newly introduced Semantic model refresh activity within Data pipelines, its just way too easy (2EZ) now. Before we dive in, let’s look at a few prerequisite items needed for this article:</p>
+        
+        
+          <h1>From Pipelines to Table: The Outputs We Ingest</h1>
+        
+        <div class="md-post-meta-inline">
+          <time datetime="2024-04-29 00:00:00+00:00">April 29, 2024</time>
+          
+            
+            <span class="md-post-meta-sep">&middot;</span>
+            <span>
+              
+                4 min read
+              
+            </span>
+          
+        </div>
+        <p>If it’s important, you should probably be logging it. With KQL Databases and the newly introduced Semantic model refresh activity within Data pipelines, its just way too easy (2EZ) now. Before we dive in, let’s look at a few prerequisite items needed for this article:</p>
 <!-- more -->
 
 <ol>
@@ -588,7 +562,7 @@
 <p><img alt="" src="../../../../2024-04-29-from-pipelines-to-table-the-outputs-we-ingest/images/image-11-1024x514.png" /></p>
 <p>And that's it, you can now view refresh events in your KQL database table. Not too shabby for a UI driven telemetry logging. Honestly, we're barely scratching the surface on all the cool stuff you could do - one ideas here is that you can extend this solution by parameterizing your workspace and dataset id's creating a metadata driven process and invoking a pipeline that utilizes this approach for your semantic model refresh logging. But that's another article for another day :)</p>
 <p>A huge shout out for this article goes out to my friend and colleague <a href="https://www.linkedin.com/in/gilleslherault/">Gilles "The baddest man alive with KQL" L'Hérault</a> for help with the Kusto side. Not only has he helped countless folks learn KQL but he continously wins folks over with sharing his passion for just how powerful Kusto is. If you get the chance connect with him on LinkedIn or in-person please do, he's an absolute riot.</p>
-
+        
 
 
 
@@ -599,12 +573,12 @@
   
 
 
-
+        
 
   
 
 
-
+        
   <h2 id="__comments">Comments</h2>
 
   <!-- 
