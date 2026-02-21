@@ -1,6 +1,4 @@
 ---
-title: "Portfolio"
-date: 2018-04-18
 hide:
   - navigation
   - toc

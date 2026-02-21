@@ -34,7 +34,7 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
   font:
-    text: Lato
+    text: Segoe UI
     code: Fira Code
   icon:
     logo: material/grid-off

@@ -1,5 +1,4 @@
 ---
-title: About
 hide:
   - navigation
   - toc

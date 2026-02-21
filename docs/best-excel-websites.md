@@ -1,6 +1,4 @@
 ---
-title: "Resources"
-date: 2015-10-31
 hide:
   - navigation
   - toc
