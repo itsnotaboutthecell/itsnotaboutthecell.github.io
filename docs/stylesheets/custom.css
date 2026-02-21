@@ -74,9 +74,11 @@
   display: none !important;
 }
 
-/* ---- Show right TOC sidebar as floating menu ---- */
-.md-sidebar--secondary {
-  display: block;
+/* ---- Show right TOC sidebar (desktop only; let Material hide on mobile) ---- */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--secondary {
+    display: block;
+  }
 }
 
 /* ---- Inline metadata under blog post title ---- */
@@ -165,6 +167,8 @@
 .md-content img {
   border-radius: 0;
   margin: 1rem 0;
+  max-width: 100%;
+  height: auto;
 }
 
 /* ---- Horizontal rules ---- */
@@ -286,4 +290,34 @@
 .bsky-join:hover {
   background: var(--md-default-fg-color);
   color: var(--md-default-bg-color) !important;
+}
+
+/* ---- Responsive / Mobile ---- */
+
+/* Iframes: never exceed container */
+.md-content iframe {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Phone-sized screens */
+@media screen and (max-width: 44.9375em) {
+  /* Stack right-aligned images (about page) */
+  .md-typeset img[align="right"] {
+    float: none !important;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  /* Reduce Bluesky nested-reply indentation */
+  .bsky-children {
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  /* Ensure code blocks scroll */
+  .md-typeset pre > code {
+    overflow-x: auto;
+  }
 }
