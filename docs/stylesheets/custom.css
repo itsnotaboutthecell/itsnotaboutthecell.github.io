@@ -48,6 +48,11 @@
   background-color: #222;
 }
 
+/* Uppercase the scrolling header title */
+.md-header__topic {
+  text-transform: uppercase;
+}
+
 /* ---- Tabs ---- */
 .md-tabs {
   background-color: #222;
@@ -64,9 +69,17 @@
   border-bottom: 2px solid #fff;
 }
 
-/* ---- Hide BOTH sidebars site-wide ---- */
-.md-sidebar {
+/* ---- Hide BOTH sidebars on non-post pages ---- */
+.md-sidebar--primary {
   display: none !important;
+}
+
+/* ---- Show right TOC sidebar as floating menu on blog posts ---- */
+.md-sidebar--secondary {
+  display: block;
+  position: sticky;
+  top: 4rem;
+  align-self: flex-start;
 }
 
 /* ---- Blog post listing ---- */
@@ -121,15 +134,50 @@
 /* ---- Blog post single page ---- */
 
 /* Hide "Back to index" link */
-a[href*=".."].md-nav__link,
 .md-post__back,
 nav.md-nav--secondary .md-nav__title {
   display: none;
 }
 
-/* Hide metadata sidebar section */
+/* Show metadata inline under post title */
 .md-post__meta.md-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: -0.5rem 0 2rem;
+  opacity: 0.6;
+  font-size: 0.8rem;
+}
+
+.md-post__meta.md-nav__list .md-nav__item--section > .md-post__title {
   display: none;
+}
+
+.md-post__meta.md-nav__list .md-nav__item {
+  border: none;
+}
+
+.md-post__meta.md-nav__list .md-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0;
+}
+
+.md-post__meta.md-nav__list .md-nav__link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.md-post__meta.md-nav__list nav {
+  display: contents;
+}
+
+.md-post__meta.md-nav__list ul {
+  display: contents;
 }
 
 /* ---- Links ---- */
