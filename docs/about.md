@@ -10,15 +10,15 @@ hide:
 
 ## About the site
 
-I'm selfish. I **want** you to be great. I'm going to repeat that so I have clarity - **I need you to be great**. Because the lessons you learn now will be the spreadsheet and data model that someone else will manage when you have left this earth (and hopefully the role you are currently in as the promotions come raining down upon you). The success of your work is not built in pretty charts or intricate formulas but in how it stands the true test of time (or Office Update).
+I'm selfish. I **want** you to be great. I'm going to repeat that so I have clarity - **I need you to be great**. Because the lessons you learn now will be the spreadsheets, data models, and data lakes that someone else will manage when you have left this earth (and hopefully the role you are currently in as the promotions come raining down upon you). The success of your work is not built in pretty charts, intricate formulas, or dynamic pipelines but in how it stands the true test of time.
 
-If you're looking for a simple trick to scale the Mt. Everest that is Power BI or Excel this may not be the droid you're looking for. It's Not About The Cell is all about the long game and rewiring the thought process for those who desire proficiency.
+If you're looking for a simple trick to scale the Mt. Everest that is Microsoft technologies this may not be the droid you're looking for. It's Not About The Cell is all about the long game and rewiring the thought process for those who desire proficiency.
 
 ---
 
 ## About the content
 
-Alex Powers believes that learning Power BI and Excel is not about memorizing formulas or tricks, but about developing a mindset and a process that can help you solve any problem with data. He aims to help his audience master the fundamentals and the best practices of data analysis and visualization, and to inspire them to create impactful and scalable solutions.
+Alex Powers believes that learning is not about memorizing tips or tricks, but about developing a mindset and a process that can help you solve any problem with data. He aims to help his audience master the fundamentals and the best practices of data analysis and visualization, and to inspire them to create impactful and scalable solutions.
 
 ---
 
