@@ -54,7 +54,7 @@ I hate to be the bearer of bad news but there is no BOMONTH (Beginning of Month)
 
 > Don't do anything rash in light of this revelation. Step away from the computer. [Serenity now](https://www.youtube.com/watch?v=Ow_9MglZrhs).
 
-Remember, you're an experienced [time traveler](http://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/) navigating the basic constructs of Excel. Let's evaluate this logically.
+Remember, you're an experienced [time traveler](https://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/) navigating the basic constructs of Excel. Let's evaluate this logically.
 
 **Talk It Out:**
 

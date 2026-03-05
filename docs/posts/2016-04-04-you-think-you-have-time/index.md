@@ -145,7 +145,7 @@ Function: **TIMEVALUE**
 
 * * *
 
-You are the expert. You are the one that everyone comes to for help. You get people out of the last minute jams. People can respect your skills, but if they don't respect your time you will never truly get anything of value accomplished. Always set time aside for yourself. Use a [Tomato Timer](http://tomato-timer.com/) to break up the daily monotony. Don't be afraid to step away from a project to gain clarity. We only have a finite amount of time on this planet. Do not spend each passing second entertaining the distractions.
+You are the expert. You are the one that everyone comes to for help. You get people out of the last minute jams. People can respect your skills, but if they don't respect your time you will never truly get anything of value accomplished. Always set time aside for yourself. Use a [Tomato Timer](https://tomato-timer.com/) to break up the daily monotony. Don't be afraid to step away from a project to gain clarity. We only have a finite amount of time on this planet. Do not spend each passing second entertaining the distractions.
 
 * * *
 

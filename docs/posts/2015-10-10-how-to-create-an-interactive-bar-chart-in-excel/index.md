@@ -88,7 +88,7 @@ Function: **SMALL**
 
  
 
-As standalone functions, LARGE and SMALL are "**nice**" to know but they really aren't helpful in telling a visual story by themselves. Utilizing what we learned in the [IF statements and Comparison Operators](http://itsnotaboutthecell.com/2015/08/10/we-need-to-talk/) lesson, we can talk through our problems and create a nested function to display these variances.
+As standalone functions, LARGE and SMALL are "**nice**" to know but they really aren't helpful in telling a visual story by themselves. Utilizing what we learned in the [IF statements and Comparison Operators](https://itsnotaboutthecell.com/2015/08/10/we-need-to-talk/) lesson, we can talk through our problems and create a nested function to display these variances.
 
 **Ask the question:**
 
@@ -115,7 +115,7 @@ As standalone functions, LARGE and SMALL are "**nice**" to know but they really 
 
 **Modern Visualization**
 
-Gone are the days of the standard [RGB](https://en.wikipedia.org/wiki/RGB_color_model) charts with grid lines and axis labels all over the place. We are now in a sleek, sexy world of information where less is always more. Software developers everywhere are getting rich selling [business intelligence](http://www.docurated.com/all-things-productivity/50-best-business-intelligence-tools) visualization tools. **Why?** That's a great question, because once you peek behind the curtain, the majority of software services are simply passing Excel workbooks through their funnels. Instead of letting your boss give them your well-deserved raise, how about taking advantage of all of the features that already exist within the program?
+Gone are the days of the standard [RGB](https://en.wikipedia.org/wiki/RGB_color_model) charts with grid lines and axis labels all over the place. We are now in a sleek, sexy world of information where less is always more. Software developers everywhere are getting rich selling [business intelligence](https://www.docurated.com/all-things-productivity/50-best-business-intelligence-tools) visualization tools. **Why?** That's a great question, because once you peek behind the curtain, the majority of software services are simply passing Excel workbooks through their funnels. Instead of letting your boss give them your well-deserved raise, how about taking advantage of all of the features that already exist within the program?
 
 * * *
 

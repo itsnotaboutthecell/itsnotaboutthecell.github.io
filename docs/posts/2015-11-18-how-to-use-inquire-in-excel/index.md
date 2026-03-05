@@ -67,7 +67,7 @@ It started out innocently: every year needed its own tab, then every month, the
 
 ### **In a Relationship**
 
-As you can see in the **Inquire** tab, auditing functions now go to 11. Well, why not just use the existing [Trace Precedents or Trace Dependents](http://itsnotaboutthecell.com/2015/09/20/to-err-is-computational/)? [These go to 11](https://www.youtube.com/watch?v=KOO5S4vxi0o).
+As you can see in the **Inquire** tab, auditing functions now go to 11. Well, why not just use the existing [Trace Precedents or Trace Dependents](https://itsnotaboutthecell.com/2015/09/20/to-err-is-computational/)? [These go to 11](https://www.youtube.com/watch?v=KOO5S4vxi0o).
 
 - Go to the **Inquire** Tab
 - Select cell **F3** in the Budget tab and press **Cell Relationship**
@@ -103,7 +103,7 @@ This is an incredibly powerful feature for reviewing the downstream impacts o
 
 - You will notice that all the information has been combined and summed where duplicate left column (Date) values exist.
 - The top row header is missing from the initial cell you used to create the table, you can easily retype this field category as a workaround.
-- Now that you're back in your datas good graces, create your [table object](http://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/) and get back to taking advantage of [table references](http://itsnotaboutthecell.com/2015/05/18/the-million-dollar-bracket/) in rebuilding your formulas.
+- Now that you're back in your datas good graces, create your [table object](https://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/) and get back to taking advantage of [table references](https://itsnotaboutthecell.com/2015/05/18/the-million-dollar-bracket/) in rebuilding your formulas.
 
 <iframe src="https://www.youtube.com/embed/YPXR0U4I2tI" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 

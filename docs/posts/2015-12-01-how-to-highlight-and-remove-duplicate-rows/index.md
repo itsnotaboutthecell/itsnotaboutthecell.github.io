@@ -65,7 +65,7 @@ In this post, we're going to start out very easy and then work our way towards s
 
 ### **Highlight Row Duplicates**
 
-This is where things get interesting as you start comparing multiple [fields and records](http://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/). Unfortunately Excel does not yet have a built-in feature to highlight these instances. You'll need to get creative with a mix of functions and conditional formatting formulas. Let's start with creating a single record.
+This is where things get interesting as you start comparing multiple [fields and records](https://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/). Unfortunately Excel does not yet have a built-in feature to highlight these instances. You'll need to get creative with a mix of functions and conditional formatting formulas. Let's start with creating a single record.
 
 Function: **CONCATENATE**
 
@@ -107,7 +107,7 @@ Function: **CONCATENATE**
 
 * * *
 
-I knew at some point you would [ask this question](http://i.imgur.com/LpRSE.jpg). Your ability to control Excel's cell referencing is extremely important. Especially in some fields where an entire workbook is driven off of a single cell's value. Within the formula bar, type **\=A1** and press the **F4** button on your keyboard to cycle through the different types of references that exist. Excel will automatically adjust if you insert or delete rows and columns so don't worry that what you write is final.
+I knew at some point you would [ask this question](https://i.imgur.com/LpRSE.jpg). Your ability to control Excel's cell referencing is extremely important. Especially in some fields where an entire workbook is driven off of a single cell's value. Within the formula bar, type **\=A1** and press the **F4** button on your keyboard to cycle through the different types of references that exist. Excel will automatically adjust if you insert or delete rows and columns so don't worry that what you write is final.
 
 ### Absolute
 
@@ -161,6 +161,6 @@ You have programmed Excel to count whether the value in the mixed cell referen
 
 * * *
 
-Presenting validated information clearly and confidently is more important than that [pretty bar chart](http://itsnotaboutthecell.com/2015/10/10/you-dont-owe-anyone-an-explanation/). Remember that you have moved mountains of data and conquered spreadsheets that others dared not touch. You are the Ayatollah of Spreadsheet-Rolla. But, keep that ego in check as nobody wants to work with someone who makes a situation difficult or tries to make them feel technologically inferior. Find ways to use Excel to elevate those around you to make them better. Remember:
+Presenting validated information clearly and confidently is more important than that [pretty bar chart](https://itsnotaboutthecell.com/2015/10/10/you-dont-owe-anyone-an-explanation/). Remember that you have moved mountains of data and conquered spreadsheets that others dared not touch. You are the Ayatollah of Spreadsheet-Rolla. But, keep that ego in check as nobody wants to work with someone who makes a situation difficult or tries to make them feel technologically inferior. Find ways to use Excel to elevate those around you to make them better. Remember:
 
 ### **Excel is your platform, not your purpose.**

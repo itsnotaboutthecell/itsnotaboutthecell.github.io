@@ -32,7 +32,7 @@ comments: true
 
 * * *
 
-Analysts estimate anywhere from 50-80% of their time is dedicated to cleansing information (Source: [New York Times](http://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0)). Making use of Excel's data validation controls can drastically reduce this necessary evil when developed properly. No longer will you spend hours trying to infer if "S" really means "Saturday" or "Sunday"; or trying to match "John Doe" with the employees actual name "Johnathan Doe". Because the time you invest now in planning what is truly important and creating a set of sound variables will pay off infinitely in the end. Not only in making data entry easier for others, but also when it comes time to analyzing the things that matter: **RESULTS.**
+Analysts estimate anywhere from 50-80% of their time is dedicated to cleansing information (Source: [New York Times](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0)). Making use of Excel's data validation controls can drastically reduce this necessary evil when developed properly. No longer will you spend hours trying to infer if "S" really means "Saturday" or "Sunday"; or trying to match "John Doe" with the employees actual name "Johnathan Doe". Because the time you invest now in planning what is truly important and creating a set of sound variables will pay off infinitely in the end. Not only in making data entry easier for others, but also when it comes time to analyzing the things that matter: **RESULTS.**
 
 * * *
 
@@ -82,7 +82,7 @@ This is great and "**it works,**" but let's say tomorrow you want to add an ite
 - Navigate to the Formulas Tab
 - Select Name Manager
     - **Name:** The named ranges and objects contained within your workbook. The ProductList displays a named range icon while the tblProducts displays the icon for a table object.
-    - **Value:** From our [previous lesson](http://itsnotaboutthecell.com/2016/02/16/500-days-of-sumsumifs/) we recognize the curly braces surrounding each named range value as information stored within an array
+    - **Value:** From our [previous lesson](https://itsnotaboutthecell.com/2016/02/16/500-days-of-sumsumifs/) we recognize the curly braces surrounding each named range value as information stored within an array
     - **Refers To:** Information either stored locally or declared using a function
 
 ![NameManager](images/NameManager.png)
@@ -104,4 +104,4 @@ As you continue to add and remove items from the column titled Product within yo
 
 * * *
 
-Honestly, I've stopped using cell ranges for some time now, and I want to make a strong argument that you should too. Even the lessons on this site were designed since day one specifically for tables and my use of cell ranges is rare unless absolutely necessary. If you're skeptical of their importance there's an entire book dedicated to **JUST** tables "[Excel Tables: A Complete Guide for Creating, Using and Automating Lists and Tables](http://www.amazon.com/Excel-Tables-Complete-Creating-Automating/dp/161547028X/ref=sr_1_1?ie=UTF8&qid=1461022246&sr=8-1&keywords=excel+table)." Ultimately, though if the majority of your time is spent cleansing unstructured information, you have two choices: either start loving it or start listing it.
+Honestly, I've stopped using cell ranges for some time now, and I want to make a strong argument that you should too. Even the lessons on this site were designed since day one specifically for tables and my use of cell ranges is rare unless absolutely necessary. If you're skeptical of their importance there's an entire book dedicated to **JUST** tables "[Excel Tables: A Complete Guide for Creating, Using and Automating Lists and Tables](https://www.amazon.com/Excel-Tables-Complete-Creating-Automating/dp/161547028X/ref=sr_1_1?ie=UTF8&qid=1461022246&sr=8-1&keywords=excel+table)." Ultimately, though if the majority of your time is spent cleansing unstructured information, you have two choices: either start loving it or start listing it.

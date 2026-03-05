@@ -22,7 +22,7 @@ tags:
 comments: true
 ---
 
-There’s nothing better than releasing the final version of your workbook - every bit of sacrifice, blood, sweat and coffee stain for the world to bask in its majesty, for small children to sing songs about and draw pictures of in kindergarten classrooms. Having finally realized [Maslow’s theory of self actualization](http://en.wikipedia.org/wiki/Self-actualization#Maslow.27s_characteristics_of_self-actualizers) in this single project - **[you](http://thumbs.dreamstime.com/x/smiling-man-fingers-pointing-to-viewer-8531900.jpg)** are the workbook messiah.
+There’s nothing better than releasing the final version of your workbook - every bit of sacrifice, blood, sweat and coffee stain for the world to bask in its majesty, for small children to sing songs about and draw pictures of in kindergarten classrooms. Having finally realized [Maslow’s theory of self actualization](https://en.wikipedia.org/wiki/Self-actualization#Maslow.27s_characteristics_of_self-actualizers) in this single project - **[you](https://thumbs.dreamstime.com/x/smiling-man-fingers-pointing-to-viewer-8531900.jpg)** are the workbook messiah.
 
 <!-- more -->
 
@@ -94,4 +94,4 @@ Download Workbook
 
 * * *
 
-Let’s take a quick breather, refresh our drinks and tell our loved one’s good bye because the [next lesson](http://itsnotaboutthecell.com/2015/05/18/the-million-dollar-bracket-2/) is not for the faint of heart.
+Let’s take a quick breather, refresh our drinks and tell our loved one’s good bye because the [next lesson](https://itsnotaboutthecell.com/2015/05/18/the-million-dollar-bracket-2/) is not for the faint of heart.

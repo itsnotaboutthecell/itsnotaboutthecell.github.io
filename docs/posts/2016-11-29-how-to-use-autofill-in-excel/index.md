@@ -115,7 +115,7 @@ If you don't want to constantly deal with the Auto Fill menu there are a couple 
 
 * * *
 
-Not bad, not bad - changing a number data type seems fairly easily, but surely Excel [munsoned](http://www.urbandictionary.com/define.php?term=munsoned) it when it came to text, right? **WRONG.**
+Not bad, not bad - changing a number data type seems fairly easily, but surely Excel [munsoned](https://www.urbandictionary.com/define.php?term=munsoned) it when it came to text, right? **WRONG.**
 
 * * *
 
@@ -215,4 +215,4 @@ In the example above, I use the **Series...** option and chose a Step Value of 1
 
 * * *
 
-Being good at something is the bare minimum required for entry.  There is no shame in desiring to be the absolute best and vocalizing this desire among friends, family or colleagues. Find a mentor, [read some books](http://www.mrexcel.com/store/index.php), [embrace a year of fear](http://heykendra.com/yearoffear/) - whatever needs to be done to get you to your goal. People want to invest in people who invest in themselves.
+Being good at something is the bare minimum required for entry.  There is no shame in desiring to be the absolute best and vocalizing this desire among friends, family or colleagues. Find a mentor, [read some books](https://www.mrexcel.com/store/index.php), [embrace a year of fear](https://heykendra.com/yearoffear/) - whatever needs to be done to get you to your goal. People want to invest in people who invest in themselves.

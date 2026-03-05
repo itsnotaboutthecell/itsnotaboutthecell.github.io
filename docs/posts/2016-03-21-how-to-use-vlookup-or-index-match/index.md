@@ -29,7 +29,7 @@ tags:
 comments: true
 ---
 
-Not since the great territory battles of [7-Eleven Vs. Quiktrip](http://www.city-data.com/forum/oklahoma-city/801662-quik-trip.html), has there been such an unparalleled rivalry: "**VLOOKUP or INDEX/MATCH?**"A seemingly innocent question, when asked among Excel users, gives you a general perception of one another. There is one function's inability to [turn left](https://youtu.be/8hJ1HDcMowk?t=13) and the others reliance on multiple functions for use. One's perceived simplicity vs. the others perceived complexity. Are we so divided, though that we are unable to recognize the benefits found within each function? I'm unsure.. but I know neither function is willing to surrender their position without a [fight](https://www.youtube.com/watch?v=mjEcj8KpuJw&feature=youtu.be&t=122).
+Not since the great territory battles of [7-Eleven Vs. Quiktrip](https://www.city-data.com/forum/oklahoma-city/801662-quik-trip.html), has there been such an unparalleled rivalry: "**VLOOKUP or INDEX/MATCH?**"A seemingly innocent question, when asked among Excel users, gives you a general perception of one another. There is one function's inability to [turn left](https://youtu.be/8hJ1HDcMowk?t=13) and the others reliance on multiple functions for use. One's perceived simplicity vs. the others perceived complexity. Are we so divided, though that we are unable to recognize the benefits found within each function? I'm unsure.. but I know neither function is willing to surrender their position without a [fight](https://www.youtube.com/watch?v=mjEcj8KpuJw&feature=youtu.be&t=122).
 
 <!-- more -->
 

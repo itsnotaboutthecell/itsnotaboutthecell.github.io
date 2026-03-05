@@ -34,7 +34,7 @@ comments: true
 
 <!-- more -->
 
-I saw you from across the Office through the [watch window](http://itsnotaboutthecell.com/2015/11/10/watch-window/). You were sitting at the [table](http://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/) with the perfectly cleansed data. I wanted to approach but just didn't know the correct queries to ask. I know we would have an instant connection - if you see this, send me your ODC file.
+I saw you from across the Office through the [watch window](https://itsnotaboutthecell.com/2015/11/10/watch-window/). You were sitting at the [table](https://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/) with the perfectly cleansed data. I wanted to approach but just didn't know the correct queries to ask. I know we would have an instant connection - if you see this, send me your ODC file.
 
 post id: 6988676976   posted: 2016\-07-15 12:02am
 
@@ -120,8 +120,8 @@ This is not to say that an analyst can't be a developer or that a developer can'
 
 **Import Data:** Inserts the data into one of the following worksheet objects or connection managers
 
-- [Table](http://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/)
-- [PivotTable Report](http://itsnotaboutthecell.com/2016/01/19/pivotal-moments-in-life/)
+- [Table](https://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/)
+- [PivotTable Report](https://itsnotaboutthecell.com/2016/01/19/pivotal-moments-in-life/)
 - **PivotChart**
 - **Only Create Connection**
     - Creates an Office Data Connection (ODC) file, does not import information into a worksheet object
@@ -147,7 +147,7 @@ Data is and always will be your number one priority and it is your job to protec
 
 * * *
 
-I still stand by my statement that "[I don’t believe any Excel workbook should contain more than 3 tabs.](http://itsnotaboutthecell.com/2015/11/18/inquire/)" and it is because of the many benefits you can reap using a Data-Visualization-Calculation (DVC) design architecture.
+I still stand by my statement that "[I don’t believe any Excel workbook should contain more than 3 tabs.](https://itsnotaboutthecell.com/2015/11/18/inquire/)" and it is because of the many benefits you can reap using a Data-Visualization-Calculation (DVC) design architecture.
 
 **DVC Design Benefits:**
 
@@ -155,7 +155,7 @@ I still stand by my statement that "[I don’t believe any Excel workbook should
 - Allow end users to easily Refresh a front end workbook to receive up to date information. Removes the necessity of distributing reports day after day.
 - Offer peace of mind and a good night's sleep \*
 
-\* Neither Alex Powers, nor It's Not About The Cell and its associates make any claims or promises regarding peace of mind or a good night's sleep. Some users may experience a greater efficiency, additional compensation and the stardom associated with being the Excel Girl | Excel Guy within their office. [Please consult with a trained professional.](http://itsnotaboutthecell.com/contact/)
+\* Neither Alex Powers, nor It's Not About The Cell and its associates make any claims or promises regarding peace of mind or a good night's sleep. Some users may experience a greater efficiency, additional compensation and the stardom associated with being the Excel Girl | Excel Guy within their office. [Please consult with a trained professional.](https://itsnotaboutthecell.com/contact/)
 
 * * *
 

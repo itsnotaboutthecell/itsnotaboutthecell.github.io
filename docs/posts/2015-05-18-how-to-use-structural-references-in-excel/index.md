@@ -19,13 +19,13 @@ tags:
 comments: true
 ---
 
-In our [last lesson](http://itsnotaboutthecell.com/2015/05/18/fivestardinner/) we talked about following the laws of fields and records. Now is the time to expand on that thought process because everything you knew about cell ranges and formulas is about to get turned upside down with two simple keyboard strokes.
+In our [last lesson](https://itsnotaboutthecell.com/2015/05/18/fivestardinner/) we talked about following the laws of fields and records. Now is the time to expand on that thought process because everything you knew about cell ranges and formulas is about to get turned upside down with two simple keyboard strokes.
 
 <!-- more -->
 
 * * *
 
-Right now is your [come-to-Jesus moment](http://www.urbandictionary.com/define.php?term=come-to-Jesus+moment). You have been abusing yourself managing cell ranges manually for far too long and it has to stop. From this day forth you will be reborn again as a devout believer in the Excel table object.
+Right now is your [come-to-Jesus moment](https://www.urbandictionary.com/define.php?term=come-to-Jesus+moment). You have been abusing yourself managing cell ranges manually for far too long and it has to stop. From this day forth you will be reborn again as a devout believer in the Excel table object.
 
 **What is a table object?**
 

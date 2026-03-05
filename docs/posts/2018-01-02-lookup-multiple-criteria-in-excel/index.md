@@ -138,7 +138,7 @@ An array formula can perform multiple calculations on one or more items in an ar
 
 **Ok... What does that mean?**
 
-In a [past lesson](http://itsnotaboutthecell.com/2016/02/16/how-to-create-a-sumsumifs-array/), we learned about hard coding arrays by manually typing in values in order for our formulas to perform multiple calculations to return a value. A C+S+E formula is no different.
+In a [past lesson](https://itsnotaboutthecell.com/2016/02/16/how-to-create-a-sumsumifs-array/), we learned about hard coding arrays by manually typing in values in order for our formulas to perform multiple calculations to return a value. A C+S+E formula is no different.
 
 **Ok... What does C+S+E mean?**
 
@@ -182,7 +182,7 @@ Not Too Shabby.
 
 * * *
 
-That's cool for multiple-condition lookups, but didn't you talk about hard coding arrays in a [previous lesson](http://itsnotaboutthecell.com/2016/02/16/how-to-create-a-sumsumifs-array/)? Great catch! **Real talk, though**: Forced array calculations can eat up crazy amounts of memory and cause performance degradation if you are thinking about filling your worksheet with them. I would recommend using them sparingly to solve more complex problems or in returning a single value.
+That's cool for multiple-condition lookups, but didn't you talk about hard coding arrays in a [previous lesson](https://itsnotaboutthecell.com/2016/02/16/how-to-create-a-sumsumifs-array/)? Great catch! **Real talk, though**: Forced array calculations can eat up crazy amounts of memory and cause performance degradation if you are thinking about filling your worksheet with them. I would recommend using them sparingly to solve more complex problems or in returning a single value.
 
 **Make It: (Remember to press CTRL+SHIFT+ENTER When Complete)**
 

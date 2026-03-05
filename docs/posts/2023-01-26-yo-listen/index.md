@@ -153,7 +153,7 @@ The code is below the image (and it's kind of long(ish)...).
     "msteams": {
         "width": "Full"
     },
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.0"
 }
 ```

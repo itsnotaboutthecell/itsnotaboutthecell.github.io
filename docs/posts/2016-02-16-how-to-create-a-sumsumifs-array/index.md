@@ -107,7 +107,7 @@ Function: **SUMIF**
 - \=SUMIF(range,criteria,\[sum\_range\])
     - Range can be anything from a single cell to a range of adjacent cells
     - Criteria is a user specified value
-        - Any text or [logical](http://itsnotaboutthecell.com/2015/08/10/we-need-to-talk/) symbols must be enclosed within quotations
+        - Any text or [logical](https://itsnotaboutthecell.com/2015/08/10/we-need-to-talk/) symbols must be enclosed within quotations
             - **Ex.** ">=45"
             - **Ex.** "North"
 
@@ -153,7 +153,7 @@ Function: **SUMIFS**
 - \=SUMIFS(sum\_range,criteria\_range1,criteria1,...)
     - Range can be anything from a single cell to a range of adjacent cells
     - Criteria is user-specified value
-        - Any text or [logical](http://itsnotaboutthecell.com/2015/08/10/we-need-to-talk/) symbols must be enclosed within quotations
+        - Any text or [logical](https://itsnotaboutthecell.com/2015/08/10/we-need-to-talk/) symbols must be enclosed within quotations
             - **Ex.** ">=45"
             - **Ex.** "North"
             - **Ex.** ">="&B5
@@ -228,7 +228,7 @@ If you haven't picked up on it by now, the COUNTIFS function is very similar to 
 
 * * *
 
-Now you've mastered multiple criteria like they're nobody's business. You adamantly swear by the statement "**[great formula lasts forever](http://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/)**", so why try and reinvent the wheel when you can simply copy and paste a formula and modify criteria here and there as needed?
+Now you've mastered multiple criteria like they're nobody's business. You adamantly swear by the statement "**[great formula lasts forever](https://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/)**", so why try and reinvent the wheel when you can simply copy and paste a formula and modify criteria here and there as needed?
 
 **Ask The Question:** What are the total soap sales in IL, MO and IA?
 
@@ -274,7 +274,7 @@ An array formula performs a calculation on each item within the collection and 
 
 * * *
 
-To store an array's values, you must use open and closed [curly brackets](http://www.computerhope.com/jargon/c/curlybra.htm). In the example above, we are creating an index for our \[State\] criteria by using {"IL","MO","IA"}. Excel is interpreting this array as seen below and returning the values within the indexed argument positions of 0, 1 and 2. ([Computer Science Starts at Zero](https://en.wikipedia.org/wiki/Zero-based_numbering)) -
+To store an array's values, you must use open and closed [curly brackets](https://www.computerhope.com/jargon/c/curlybra.htm). In the example above, we are creating an index for our \[State\] criteria by using {"IL","MO","IA"}. Excel is interpreting this array as seen below and returning the values within the indexed argument positions of 0, 1 and 2. ([Computer Science Starts at Zero](https://en.wikipedia.org/wiki/Zero-based_numbering)) -
 
 **See It:**
 

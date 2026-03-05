@@ -47,7 +47,7 @@ Function: **EXACT**
 
 * * *
 
-The EXACT function isn't rocket science - while phonetically the values may sound the same your computer interprets them in a much more _**exact**_ manner. Using the [ASCII](http://www.ascii-code.com/) (American Standard Code for Information Interchange) decimal codes below for each character's value you can better visualize how your computer is interpreting the words "DOG" vs "Dog".
+The EXACT function isn't rocket science - while phonetically the values may sound the same your computer interprets them in a much more _**exact**_ manner. Using the [ASCII](https://www.ascii-code.com/) (American Standard Code for Information Interchange) decimal codes below for each character's value you can better visualize how your computer is interpreting the words "DOG" vs "Dog".
 
 * * *
 
@@ -155,13 +155,13 @@ Function: **SUM**
 
 - The **CONCATENATE** function's return type is text - it will convert any data type into text and return as text for example "Die Hard 3"
 
-- The **SUM** function's return type is a number - it requires the functions parameters to be any of the number data type structures - if you try to add the data types Text and Number together you will receive the error handling message of [#VALUE!](http://itsnotaboutthecell.com/2015/09/20/to-err-is-computational/) due to incompatible information.
+- The **SUM** function's return type is a number - it requires the functions parameters to be any of the number data type structures - if you try to add the data types Text and Number together you will receive the error handling message of [#VALUE!](https://itsnotaboutthecell.com/2015/09/20/to-err-is-computational/) due to incompatible information.
 
 You already know these things in the real world, all we are doing now is understanding how your computer interprets them.
 
 * * *
 
-Let's go ahead and bring it on home now by discussing what's going on each time you pass a formula through an Excel function. First off you call the function by typing "=" then the function **name** EXACT whose **parameters** are text1 as the text data structure string and text2 as the text data structure string with an expected **return type** of Boolean (TRUE | FALSE). The Excel engine will now evaluate the **function's body** to determine **if** text1 is the same as text2 and **then** return a **boolean** ( TRUE | FALSE) datatype value that either satisfies the requirements of the **return type** or results in an [error message](http://itsnotaboutthecell.com/2015/09/20/to-err-is-computational/) upon completion.
+Let's go ahead and bring it on home now by discussing what's going on each time you pass a formula through an Excel function. First off you call the function by typing "=" then the function **name** EXACT whose **parameters** are text1 as the text data structure string and text2 as the text data structure string with an expected **return type** of Boolean (TRUE | FALSE). The Excel engine will now evaluate the **function's body** to determine **if** text1 is the same as text2 and **then** return a **boolean** ( TRUE | FALSE) datatype value that either satisfies the requirements of the **return type** or results in an [error message](https://itsnotaboutthecell.com/2015/09/20/to-err-is-computational/) upon completion.
 
 ![Exact Function](images/Exact.png)
 

@@ -10,7 +10,7 @@ Most people have posters of [Muhammad Ali](https://s3.amazonaws.com/rapgenius/tu
 
 ### **John Walkenbach**
 
-Website: [http://spreadsheetpage.com/](http://spreadsheetpage.com/)
+Website: [https://spreadsheetpage.com/](https://spreadsheetpage.com/)
 
 I describe John as a meat and potatoes Excel guy, be prepared to fill up on the in-depth information as to the "**WHY**" we do the things we do in Excel, not just the "**HOW TO**".
 
@@ -26,7 +26,7 @@ Chicago Bears fan and master of the ghost pepper, Oz speaks from the heart and 
 
 ### Excel TV
 
-Website: [http://www.excel.tv](http://www.excel.tv)
+Website: [https://www.excel.tv](https://www.excel.tv)
 
 The premier website for a who's who in the Excel community. Engaging conversations and live content make this a must-see event.
 

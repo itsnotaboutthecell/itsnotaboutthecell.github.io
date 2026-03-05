@@ -91,7 +91,7 @@ I knew I was going to have some skeptics after this big reveal so let's talk ab
 - You established an event - OnClick
     - Every time the Spin Button is pressed, the program is going to respond by changing the incremental value up or down onto your spreadsheet.
 
-The whole process that occurs as you press up and down is known as an [event handler](http://searchsoa.techtarget.com/definition/event-handler). In layman's terms, how the application Excel receives and responds to events.
+The whole process that occurs as you press up and down is known as an [event handler](https://www.techtarget.com/definition/event-handler). In layman's terms, how the application Excel receives and responds to events.
 
 > **Input -> Output**
 
@@ -101,7 +101,7 @@ Take some time and explore the different form objects. Don't get frustrated if 
 
 Now that we're done nerding out on the technical jargon for a bit, let's bring all the time traveling, MIN, MAX, and EOMONTH talk full-circle.
 
-We're going to go back to our [last lesson](http://itsnotaboutthecell.com/2015/06/10/mad-maximum-value/) with the Mad Maximum workbook and invoke some [time travel](http://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/) logic along the way.
+We're going to go back to our [last lesson](https://itsnotaboutthecell.com/2015/06/10/mad-maximum-value/) with the Mad Maximum workbook and invoke some [time travel](https://itsnotaboutthecell.com/2015/06/01/wait-a-minute-doc-are-you-telling-me-that-you-built-a-time-machine-out-of-a-spreadsheet/) logic along the way.
 
 **Describe It - Nested Function:**
 
@@ -130,4 +130,4 @@ Let's change this static value into something a bit more interactive with our fo
 
 ## ["It is not the spoon that bends, it is only yourself."](https://www.youtube.com/watch?v=7n5UBrTGdxo)
 
-Getting past the limiting idea that Excel is just a bunch of square boxes is the ultimate key to your success. People use Excel to create [beautiful artwork](http://www.spoon-tamago.com/2013/05/28/tatsuo-horiuchi-excel-spreadsheet-artist/), [role-playing games](http://carywalkin.ca/2013/03/17/arena-xlsm-released/) and financial modeling that drives our economies. It's Not About The Cell is not just a funny title. It's about changing your mindset and leveraging basic, everyday concepts to help you build your talents and take over the world. Thank you for taking this journey with me.
+Getting past the limiting idea that Excel is just a bunch of square boxes is the ultimate key to your success. People use Excel to create [beautiful artwork](https://www.spoon-tamago.com/2013/05/28/tatsuo-horiuchi-excel-spreadsheet-artist/), [role-playing games](https://carywalkin.ca/2013/03/17/arena-xlsm-released/) and financial modeling that drives our economies. It's Not About The Cell is not just a funny title. It's about changing your mindset and leveraging basic, everyday concepts to help you build your talents and take over the world. Thank you for taking this journey with me.

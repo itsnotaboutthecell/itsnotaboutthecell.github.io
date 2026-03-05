@@ -21,7 +21,7 @@ tags:
 comments: true
 ---
 
-Being the [115th](http://powerspreadsheets.com/excel-resources-list/) ranked general Excel blog on the internet sure has a nice ring to it. Well deserving of your e-mail subscription (located in the bottom right hand corner) if I was to be rather [James Blunt](https://www.youtube.com/watch?v=oofSnsGkops) about it. But what good is a rank if there are multiple categories to be considered?
+Being the [115th](https://powerspreadsheets.com/excel-resources-list/) ranked general Excel blog on the internet sure has a nice ring to it. Well deserving of your e-mail subscription (located in the bottom right hand corner) if I was to be rather [James Blunt](https://www.youtube.com/watch?v=oofSnsGkops) about it. But what good is a rank if there are multiple categories to be considered?
 
 <!-- more -->
 
@@ -122,7 +122,7 @@ Function: **RANK**
 
 * * *
 
-**Refresher:** [MAX](http://itsnotaboutthecell.com/2015/06/10/maximum-value/)
+**Refresher:** [MAX](https://itsnotaboutthecell.com/2015/06/10/maximum-value/)
 
 **Make It:**
 
@@ -176,7 +176,7 @@ The absolute reference of $D$2 remains constant, but the relative reference cont
 
 * * *
 
-**Refresher:** [LARGE](http://itsnotaboutthecell.com/2015/10/10/you-dont-owe-anyone-an-explanation/)
+**Refresher:** [LARGE](https://itsnotaboutthecell.com/2015/10/10/you-dont-owe-anyone-an-explanation/)
 
 **Make It:**
 
@@ -364,7 +364,7 @@ Function: **NOT**
 
 * * *
 
-I went ahead and did a lot of the heavy lifting with the INDEX/MATCH on the Dashboard tab since I know you are already a [LOOKUP master](http://itsnotaboutthecell.com/2016/03/21/vlookup-index-match/). All I want from you right now is to go ahead and wrap up that pretty picture with some neat tricks. After this monster of a lesson, you deserve it.
+I went ahead and did a lot of the heavy lifting with the INDEX/MATCH on the Dashboard tab since I know you are already a [LOOKUP master](https://itsnotaboutthecell.com/2016/03/21/vlookup-index-match/). All I want from you right now is to go ahead and wrap up that pretty picture with some neat tricks. After this monster of a lesson, you deserve it.
 
 * * *
 
@@ -405,7 +405,7 @@ Function: **REPT**
 
 * * *
 
-**Wrap It Up:** Oftentimes, the pretty picture is all that people care about and that is 100% okay. For Excel developers like me and you, though, it's about more than just the finished product. I've [said it before](http://itsnotaboutthecell.com/about/) and I'll say it again - the success of your workbook is not based upon pretty charts or intricate formulas, but in how it stands the test of time (or Office Update). Your workbook was built to last. Great job.
+**Wrap It Up:** Oftentimes, the pretty picture is all that people care about and that is 100% okay. For Excel developers like me and you, though, it's about more than just the finished product. I've [said it before](https://itsnotaboutthecell.com/about/) and I'll say it again - the success of your workbook is not based upon pretty charts or intricate formulas, but in how it stands the test of time (or Office Update). Your workbook was built to last. Great job.
 
 * * *
 

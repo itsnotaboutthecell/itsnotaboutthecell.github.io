@@ -140,7 +140,7 @@ You've completely bypassed multiple **COUNT** or **COUNTIFS** functions in orde
 
 * * *
 
-You've just made a PivotTable **by simply dragging and dropping**. In many respects, you might be considered an advanced Excel user by possessing this ability alone. But my [mission](http://itsnotaboutthecell.com/about/) isn't to make you good at Excel; it's to make you **great** at it. As an Excel developer, being as efficient and effective as possible in delivering interactive solutions to your end users will make you [streets ahead](https://www.youtube.com/watch?v=rf1GSjo4zSY&feature=youtu.be&t=17).
+You've just made a PivotTable **by simply dragging and dropping**. In many respects, you might be considered an advanced Excel user by possessing this ability alone. But my [mission](https://itsnotaboutthecell.com/about/) isn't to make you good at Excel; it's to make you **great** at it. As an Excel developer, being as efficient and effective as possible in delivering interactive solutions to your end users will make you [streets ahead](https://www.youtube.com/watch?v=rf1GSjo4zSY&feature=youtu.be&t=17).
 
 * * *
 
@@ -233,7 +233,7 @@ While I think the Timeline slicer is a great addition to Excel 2013 and on, I ra
 
 ![Timeline](images/Timeline.gif)
 
-#### Do me a favor and [rock the vote](http://excel.uservoice.com/forums/304921-excel-for-windows-desktop-application/suggestions/10765209-enable-the-time-level-functionality-of-the-timelin) for time level to be fixed.
+#### Do me a favor and [rock the vote](https://excel.uservoice.com/forums/304921-excel-for-windows-desktop-application/suggestions/10765209-enable-the-time-level-functionality-of-the-timelin) for time level to be fixed.
 
 * * *
 
