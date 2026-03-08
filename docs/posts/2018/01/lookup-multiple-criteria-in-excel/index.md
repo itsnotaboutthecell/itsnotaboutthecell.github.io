@@ -12,7 +12,6 @@ As the war wages on between **#TEAMVLOOKUP** and **#TEAMINDEXMATCH,** a new cha
 
 <!-- more -->
 
-#### Download Workbook
 
  
 
@@ -183,16 +182,10 @@ Instead of hard-coding values we are now using the structural reference stateLis
 
 * * *
 
- 
-
-## **\*Drops The Mic\***
-
-## **\*Throws The Bat\***
-
-## **We're Done Here**
-
- 
-
-* * *
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">*Drops The Mic*</span>
+<span class="emphasis-action">*Throws The Bat*</span>
+<span class="emphasis-action">We're Done Here</span>
+</div>
 
 This was certainly a very cerebral lesson in some respects - but that's why you are here. Your brand is built on putting out the best product for others to use, and doing more with less is an approach that you’re already familiar with. Array formulas, while they certainly require a bit more forethought, can deliver powerful results in the long-term development of your outputs. Array formulas may represent a new strange world that you are entering into, but I know you've got this. Keep going.

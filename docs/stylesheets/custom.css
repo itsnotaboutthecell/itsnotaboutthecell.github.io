@@ -98,6 +98,22 @@
   margin: -1.5rem 0 2rem;
 }
 
+/* ---- Dramatic emphasis text (mic drops, action statements) ---- */
+.emphasis-action {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: var(--md-accent-fg-color);
+}
+
+.emphasis-action-group {
+  margin: 2rem 0;
+  text-align: center;
+}
+
 .md-post-meta-sep {
   margin: 0 0.4rem;
 }

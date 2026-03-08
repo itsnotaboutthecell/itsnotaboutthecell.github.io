@@ -12,11 +12,6 @@ Not since the great territory battles of [7-Eleven Vs. Quiktrip](https://www.c
 
 <!-- more -->
 
-### Download Workbook
-
- 
-
-## #TEAMVLOOKUP
 
 * * *
 

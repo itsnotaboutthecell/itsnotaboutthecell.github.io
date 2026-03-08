@@ -14,10 +14,6 @@ With every passing second of every minute, of every hour - you are in a constant
 
 * * *
 
-#### Download Workbook
-
-* * *
-
 Function: **INT**
 
 **Describe It:**

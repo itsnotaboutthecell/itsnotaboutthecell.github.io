@@ -22,7 +22,6 @@ Analysts estimate anywhere from 50-80% of their time is dedicated to cleansing i
 
 * * *
 
-#### Download Workbook
 
 * * *
 

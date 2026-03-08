@@ -22,10 +22,6 @@ If repetition is the key to mastery, repeating an activity the wrong way is a 
 
 * * *
 
-#### DOWNLOAD WORKBOOK
-
-* * *
-
 ### Auto Fill Options
 
 Information populated or returned by Auto Fill is direction-dependent.

@@ -34,7 +34,6 @@ The chart below alone utilizes the following features - IF, SMALL, LARGE, Numbe
 
 #### Quit Staring At It And Start Making It
 
-Download Workbook
 
 * * *
 

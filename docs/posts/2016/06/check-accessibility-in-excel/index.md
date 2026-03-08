@@ -14,9 +14,6 @@ The founding fathers of Multiplan intended that spreadsheets would be for eve
 
 * * *
 
-### Download Workbook
-
-* * *
 ## Enable Speak Cells
 **Add It:**
 

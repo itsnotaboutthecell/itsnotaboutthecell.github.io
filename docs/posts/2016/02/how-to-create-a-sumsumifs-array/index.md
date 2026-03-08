@@ -20,9 +20,6 @@ Undoubtedly you have called a function a formula and a formula a function; it's 
 
 * * *
 
-Download Workbook
-
-* * *
 
 ## Day 1: SUM Basics
 

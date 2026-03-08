@@ -22,7 +22,6 @@ Great workbooks stand the test of time. This is a fact. The more you continue to
 
 We're jumping right into some of that learning, so for now, [enjoy](https://www.youtube.com/watch?v=SHoNWwhzh3M) this lesson.
 
-Download Workbook
 
 Function: **EOMONTH**
 

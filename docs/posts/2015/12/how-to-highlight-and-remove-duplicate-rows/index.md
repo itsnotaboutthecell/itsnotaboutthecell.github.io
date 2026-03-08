@@ -20,10 +20,6 @@ Information is not an argument, it's a conversation.  As a developer, having th
 
 * * *
 
-#### Download Workbook
-
-* * *
-
 In this post, we're going to start out very easy and then work our way towards some more advanced concepts. [Bear with me](https://www.youtube.com/watch?v=rqFf-0eROUA).
 
 <iframe src="https://www.youtube.com/embed/zQZARjckpn8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>

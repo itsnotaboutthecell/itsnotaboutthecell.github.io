@@ -22,10 +22,6 @@ Being the [115th](https://powerspreadsheets.com/excel-resources-list/) ranked g
 
 * * *
 
-### **DOWNLOAD WORKBOOK**
-
-* * *
-
 In this lesson we're going to create cascading drop downs and in cell graphics to rate popular (and less than popular) movie sequels. First things first: let's create some controls around our rating system.
 
 - Hover above the column **\[Rating\]** until a downward black arrow appears. Then, click to select the table columns data body range.
@@ -120,9 +116,10 @@ Function: **RANK**
 
 * * *
 
-##### **Alright, alright, alright...**
-
-##### **Each movie now has a unique rating.**
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">Alright, alright, alright...</span>
+<span class="emphasis-action">Each movie now has a unique rating.</span>
+</div>
 
 * * *
 

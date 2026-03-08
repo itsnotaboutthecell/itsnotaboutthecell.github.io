@@ -18,10 +18,6 @@ It's Dangerous To Go Alone! Take This.
 
 * * *
 
-### DOWNLOAD WORKBOOK
-
-* * *
-
 If you find yourself becoming a mindless drone, constantly wondering when it's the weekend - then it's time to add to your arsenal. Returning the calendar work days quickly can be an incredibly powerful solution to overcome this challenge, but only when used correctly.
 
 * * *

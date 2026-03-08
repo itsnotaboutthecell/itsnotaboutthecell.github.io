@@ -33,10 +33,6 @@ There is no such thing as "**the right time**" when it comes to developing your 
 
 * * *
 
-### Download Workbook
-
-* * *
-
 ### Let's Get Pivotal, Pivotal!
 
 - Go to the Data worksheet and select a cell (**A1**) within your table object

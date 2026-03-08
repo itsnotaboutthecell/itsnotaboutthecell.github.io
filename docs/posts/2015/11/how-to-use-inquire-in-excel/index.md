@@ -34,7 +34,6 @@ It started out innocently: every year needed its own tab, then every month, the
 
 * * *
 
-#### Download Workbook
 
 * * *
 
