@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-> ##### Until you've tasted the sour you can never truly enjoy the sweet.
+You've been clicking around in Excel for years, maybe decades, thinking you've seen it all. Spoiler alert: you haven't. Today I'm introducing you to the Developer tab - the gateway drug to buttons, spin controls, and dropdown menus that respond to user input. Fair warning: once you enable this thing, there's no going back to your old life. From this day forward, you are a developer. **\*Insert infomercial speech about how easy Excel is and how to master in a weekend.\***
 
 <!-- more -->
+
+> ##### Until you've tasted the sour you can never truly enjoy the sweet.
 
 * * *
 

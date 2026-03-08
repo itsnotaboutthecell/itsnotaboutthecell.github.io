@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-### **"Without villains, there can be no heroes."**
+Every hero needs a villain. Every dataset needs a maximum (and minimum) value. Today we're talking MAX, MIN, and the criminally underrated EOMONTH function - your new best friend for calculating month-end dates without wanting to flip your desk. No BOMONTH function exists though. I know. [Serenity now](https://www.youtube.com/watch?v=Ow_9MglZrhs).
 
 <!-- more -->
+
+### **"Without villains, there can be no heroes."
 
 Our society is suffering under the constant oppression of dystopian workbooks - riddled with mediocrity and confined to restrictive methods. We need a hero. Someone to _write_ the wrongs and be the protagonist in our story. We need a Mad Maximum Value.
 

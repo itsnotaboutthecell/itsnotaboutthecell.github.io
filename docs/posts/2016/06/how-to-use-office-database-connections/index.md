@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-![CraigslistHeader](images/CraigslistHeader.png)
+The best part about having data is having CURRENT data. Obtaining up-to-date information shouldn't be a grind of opening workbook after workbook or constantly exporting database objects. It should be a quick Refresh All and then you're on to the next problem to solve. I saw you from across the Office through the [watch window](https://itsnotaboutthecell.com/2015/11/10/watch-window/). You were sitting at the [table](https://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/) with the perfectly cleansed data. I wanted to approach but just didn't know the correct queries to ask. Send me your ODC file.
 
 <!-- more -->
+
+![CraigslistHeader](images/CraigslistHeader.png)
 
 I saw you from across the Office through the [watch window](https://itsnotaboutthecell.com/2015/11/10/watch-window/). You were sitting at the [table](https://itsnotaboutthecell.com/2015/05/18/fivestardinneronatable/) with the perfectly cleansed data. I wanted to approach but just didn't know the correct queries to ask. I know we would have an instant connection - if you see this, send me your ODC file.
 

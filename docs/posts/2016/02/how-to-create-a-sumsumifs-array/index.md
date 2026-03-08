@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-#### This is not an Excel Lesson... This is a Lesson About Excel.
+Undoubtedly you have called a function a formula and a formula a function; it's just the nature of the Excel-lingo beast. SUM is the function everyone knows. SUMIF is the function most people discover eventually. But SUM(SUMIFS()) - an array formula that lets you sum across multiple criteria simultaneously - that's where things get *interesting*. I'm going to take you from Day 1 all the way to array formulas that will make your coworkers ask if you sold your soul to a spreadsheet demon. (You didn't. Probably.)
 
 <!-- more -->
+
+#### This is not an Excel Lesson... This is a Lesson About Excel.
 
 [![](images/500DaysOfSums.png)](https://society6.com/product/toms-favourite-spot-angels-knoll-park-la-500-days-of-summer_print#1=45)
 

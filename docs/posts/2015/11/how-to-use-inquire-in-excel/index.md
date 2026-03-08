@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-### "If you can't explain it simply, you don't understand it well enough."
+It started out innocently: every year needed its own tab, then every month, then every day. Before you knew it, finding "**that one tab**" turned into Legends of The Hidden Temple with [Kirk Fogg yelling directions](https://www.youtube.com/watch?v=9sMTqyLQLIc) at you as you feverishly click about. Enter the Inquire add-in - Microsoft's hidden gem for auditing workbooks so complex they've achieved sentience. Cell relationships, workbook comparisons, formula tracing that [goes to 11](https://www.youtube.com/watch?v=KOO5S4vxi0o). Let's enable it.
 
 <!-- more -->
+
+### "If you can't explain it simply, you don't understand it well enough."
 
 \-Albert Einstein
 

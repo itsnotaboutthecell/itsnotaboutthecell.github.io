@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-### We all have problems.
+Excel is not the solution to your problems, **you are**. But comparison operators? Those are the *tools* that help you ask the right questions. Greater than, less than, equal to - these simple symbols unlock 816 possible combinations of logic (I did the math, you'll see). Combined with IF statements, they'll take you from recreational user to the person everyone asks for help. [Just do it](https://www.youtube.com/watch?v=ZXsQAXx_ao0).
 
 <!-- more -->
+
+### We all have problems.
 
 Excel is an executable. No more or less than 1's and 0's interpreted by your operating system. To its unsuspecting users it is perceived as a daunting application full of things that you keep meaning to learn more about. Just stop.
 

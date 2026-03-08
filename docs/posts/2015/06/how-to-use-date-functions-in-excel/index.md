@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-#### "**I don't know what you're making me do and** **I have no idea when I will ever use this.**"
+Listen, I get it - dates in Excel feel like that one friend who insists on explaining the plot of [Primer](https://en.wikipedia.org/wiki/Primer_(film)) at parties. But here's the thing: once you understand that Excel treats every date as a number (January 1, 1900 = 1, for the curious), you unlock the ability to build spreadsheets that actually *do math* with time. Past, present, future - it's all just addition and subtraction. [Great Scott!](https://www.youtube.com/watch?v=SP5FWTHMQKY)
 
 <!-- more -->
+
+#### "**I don't know what you're making me do and** **I have no idea when I will ever use this.**"
 
 Good. That means you're on the right track, because I need you to look past the obvious and start concentrating on the possibilities.
 

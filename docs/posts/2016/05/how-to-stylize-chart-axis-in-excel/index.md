@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-It's Dangerous To Go Alone! Take This.
+If you find yourself becoming a mindless drone, constantly wondering when it's the weekend - then it's time to add to your arsenal. The WORKDAY function returns calendar work days quickly, but only when used correctly. Not every industry runs Monday through Friday though, so we'll cover WORKDAY.INTL for custom weekend schedules too. Put on your [sunglasses](https://www.youtube.com/watch?v=c9rrgJXfLns), we're going in.
 
 <!-- more -->
+
+It's Dangerous To Go Alone! Take This.
 
 ![SunglassesBlack](images/SunglassesBlack.jpg)
 

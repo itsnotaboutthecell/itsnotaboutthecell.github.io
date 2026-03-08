@@ -9,9 +9,11 @@ tags:
 comments: true
 ---
 
-## piv·ot·al
+There is no such thing as "**the right time**" when it comes to developing your talents in Excel. You are always on call as the swiss-army-knife of information. Today a financial analyst, tomorrow a visualization specialist... within each role you are consistently relied upon to evolve your talents at a moment's notice. So, throw away your abacus because you're about to learn one of the best tools for your arsenal. I've seen people spend hours writing COUNTIFS that could be replaced with a few drag-and-drop actions. [Pivotal, indeed](https://www.youtube.com/watch?v=AdIpoE2LEps).
 
 <!-- more -->
+
+## piv·ot·al
 
 ##### ˈpivədl/
 

@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-##### **“If I paint something, I don't want to have to explain what it is.”**
+A common theme you will hear me discussing is storytelling. "They" say a picture is worth a thousand words, and the human eye is receptive to shapes and colors as a means for detecting object variances. The chart we're building today uses IF, SMALL, LARGE, Number Formatting, Gap Width, Trendline and Data Labels - quite a bit of work for just 6 bars, right? But through all these layers, you end up with something your end users can understand at a simple glance. [Finally](https://www.youtube.com/watch?v=sGwgMeO5cF4&feature=youtu.be&t=7), we're doing data visualization.
 
 <!-- more -->
+
+##### **"If I paint something, I don't want to have to explain what it is."
 
 ###### **\-Bob Ross**
 

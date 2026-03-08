@@ -8,9 +8,11 @@ tags:
 comments: true
 ---
 
-#### "What gets measured gets managed."
+Analysts estimate anywhere from 50-80% of their time is dedicated to cleansing information (Source: [New York Times](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html?_r=0)). No longer will you spend hours trying to infer if "S" really means "Saturday" or "Sunday"; or trying to match "John Doe" with the employee's actual name "Johnathan Doe". The time you invest now in planning what is truly important and creating a set of sound variables will pay off infinitely in the end. Not only in making data entry easier for others, but also when it comes time to analyzing the things that matter: **RESULTS.**
 
 <!-- more -->
+
+#### "What gets measured gets managed."
 
 **Peter Drucker**
 
