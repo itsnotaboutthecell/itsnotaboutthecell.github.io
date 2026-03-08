@@ -164,9 +164,11 @@ def get_destination_path(meta: dict, slug: str) -> Path:
 def deploy_site():
     """Deploy site to GitHub Pages using mkdocs gh-deploy."""
     print("\n🚀 Deploying to GitHub Pages...")
+    env = {**os.environ, "NO_MKDOCS_2_WARNING": "1"}
     result = subprocess.run(
         ["mkdocs", "gh-deploy", "--force"],
-        capture_output=False
+        capture_output=False,
+        env=env
     )
     
     if result.returncode != 0:
@@ -254,10 +256,12 @@ def publish_draft(draft_name: str, override_date: str = None, dry_run: bool = Fa
     
     # Run build to verify
     print("\n🔨 Building site to verify...")
+    env = {**os.environ, "NO_MKDOCS_2_WARNING": "1"}
     result = subprocess.run(
         ["mkdocs", "build"],
         capture_output=True,
-        text=True
+        text=True,
+        env=env
     )
     
     if result.returncode != 0:
