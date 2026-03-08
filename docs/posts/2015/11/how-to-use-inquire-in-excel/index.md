@@ -12,9 +12,9 @@ It started out innocently: every year needed its own tab, then every month, then
 
 <!-- more -->
 
-### "If you can't explain it simply, you don't understand it well enough."
-
-\-Albert Einstein
+> "If you can't explain it simply, you don't understand it well enough."
+>
+> — Albert Einstein
 
 * * *
 
@@ -72,7 +72,7 @@ This is an incredibly powerful feature for reviewing the downstream impacts o
 
 * * *
 
-##### Now that we know our cell's value comes from 3 separate tabs, let's get down to business and create one data table.
+Now that we know our cell's value comes from 3 separate tabs, let's get down to business and create one data table.
 
 * * *
 

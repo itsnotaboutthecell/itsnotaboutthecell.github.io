@@ -46,4 +46,4 @@ In a world of instant gratification and "I need this done yesterday," it's diff
 
 I [less-than-three](https://www.urbandictionary.com/define.php?term=I+less+than+three+you+%3C3) Microsoft Excel but I don't want to have it open all day long. The data is in the real world. Become efficient in Excel, provide solutions and get back out there. If you're in the trenches and you consistently find yourself with Excel open on your desktop - step back and ask yourself:
 
-#### "**HOW CAN I USE EXCEL TO SPEND LESS TIME IN EXCEL?**"
+> "**HOW CAN I USE EXCEL TO SPEND LESS TIME IN EXCEL?**"

@@ -229,9 +229,9 @@ Last but certainly not least, when it comes to working with a PivotTable, refres
 
 * * *
 
-#### "We didn't wait for Excel before we went to the moon."
-
-##### \-Oz D Du Soleil
+> "We didn't wait for Excel before we went to the moon."
+>
+> — Oz D Du Soleil
 
 * * *
 

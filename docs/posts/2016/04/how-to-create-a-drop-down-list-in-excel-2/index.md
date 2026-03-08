@@ -12,9 +12,9 @@ Analysts estimate anywhere from 50-80% of their time is dedicated to cleansing i
 
 <!-- more -->
 
-#### "What gets measured gets managed."
-
-**Peter Drucker**
+> "What gets measured gets managed."
+>
+> — Peter Drucker
 
 * * *
 
@@ -50,9 +50,9 @@ This is great and "**it works,**" but let's say tomorrow you want to add an ite
 
 * * *
 
-### "Insanity Is Repeating The Same Mistakes and Expecting Different Results"
-
-[Not Albert Einstein](https://www.quora.com/Did-Einstein-really-define-insanity-as-doing-the-same-thing-over-and-over-again-and-expecting-different-results)
+> "Insanity Is Repeating The Same Mistakes and Expecting Different Results"
+>
+> — [Not Albert Einstein](https://www.quora.com/Did-Einstein-really-define-insanity-as-doing-the-same-thing-over-and-over-again-and-expecting-different-results)
 
 * * *
 

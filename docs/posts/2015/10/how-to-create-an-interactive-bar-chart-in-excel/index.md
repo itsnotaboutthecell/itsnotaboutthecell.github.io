@@ -99,7 +99,7 @@ Gone are the days of the standard [RGB](https://en.wikipedia.org/wiki/RGB_color_
 
 * * *
 
-##### Just as a warning, you'll need to watch this video several times so don't get frustrated with the written instructions. Just pick one section at a time, master it and move on.
+Just as a warning, you'll need to watch this video several times so don't get frustrated with the written instructions. Just pick one section at a time, master it and move on.
 
 <iframe src="https://www.youtube.com/embed/vCuTlE1KoGs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 

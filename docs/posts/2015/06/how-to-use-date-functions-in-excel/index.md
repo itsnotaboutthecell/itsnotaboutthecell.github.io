@@ -12,7 +12,7 @@ Listen, I get it - dates in Excel feel like that one friend who insists on expla
 
 <!-- more -->
 
-#### "**I don't know what you're making me do and** **I have no idea when I will ever use this.**"
+> "**I don't know what you're making me do and I have no idea when I will ever use this.**"
 
 Good. That means you're on the right track, because I need you to look past the obvious and start concentrating on the possibilities.
 
