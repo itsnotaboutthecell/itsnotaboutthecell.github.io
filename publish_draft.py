@@ -161,6 +161,21 @@ def get_destination_path(meta: dict, slug: str) -> Path:
     return POSTS_DIR / year / month / slug
 
 
+def deploy_site():
+    """Deploy site to GitHub Pages using mkdocs gh-deploy."""
+    print("\n🚀 Deploying to GitHub Pages...")
+    result = subprocess.run(
+        ["mkdocs", "gh-deploy", "--force"],
+        capture_output=False
+    )
+    
+    if result.returncode != 0:
+        print("❌ Deploy failed!")
+        sys.exit(1)
+    
+    print("✅ Deployed to GitHub Pages!")
+
+
 def publish_draft(draft_name: str, override_date: str = None, dry_run: bool = False):
     """Publish a draft to the live site."""
     
@@ -215,7 +230,7 @@ def publish_draft(draft_name: str, override_date: str = None, dry_run: bool = Fa
         print("\n🔍 DRY RUN - No changes made")
         print(f"   Would create: {dest_path}")
         print(f"   Would copy {len(list(draft_path.glob('images/*')))} images")
-        return
+        return False
     
     # Create destination directory
     dest_path.mkdir(parents=True, exist_ok=True)
@@ -260,6 +275,8 @@ def publish_draft(draft_name: str, override_date: str = None, dry_run: bool = Fa
     
     print(f"\n🎉 Published! Your post is now at:")
     print(f"   {dest_path}/index.md")
+    
+    return True  # Indicate success for deploy chain
 
 
 def list_drafts():
@@ -350,8 +367,10 @@ Examples:
   python publish_draft.py --list              List all drafts
   python publish_draft.py --new my-post       Create a new draft
   python publish_draft.py my-post             Publish a draft
+  python publish_draft.py my-post --deploy    Publish and deploy to GitHub Pages
   python publish_draft.py my-post --dry-run   Preview without publishing
   python publish_draft.py my-post --date 2026-04-01  Override publish date
+  python publish_draft.py --deploy            Deploy site without publishing
         """
     )
     
@@ -360,6 +379,7 @@ Examples:
     parser.add_argument('--new', '-n', metavar='NAME', help='Create a new draft')
     parser.add_argument('--date', '-d', help='Override publish date (YYYY-MM-DD)')
     parser.add_argument('--dry-run', action='store_true', help='Preview without making changes')
+    parser.add_argument('--deploy', action='store_true', help='Deploy to GitHub Pages after publishing')
     
     args = parser.parse_args()
     
@@ -368,7 +388,11 @@ Examples:
     elif args.new:
         create_draft(args.new)
     elif args.draft:
-        publish_draft(args.draft, args.date, args.dry_run)
+        success = publish_draft(args.draft, args.date, args.dry_run)
+        if args.deploy and success and not args.dry_run:
+            deploy_site()
+    elif args.deploy:
+        deploy_site()
     else:
         parser.print_help()
 
