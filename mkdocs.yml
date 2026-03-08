@@ -46,6 +46,8 @@ plugins:
       blog_toc: true
       archive: false
       categories: false
+      post_url_format: "{date}/{slug}"
+      post_url_date_format: "yyyy/MM"
 
 markdown_extensions:
   - pymdownx.highlight:
