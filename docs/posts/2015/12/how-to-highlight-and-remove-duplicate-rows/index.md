@@ -144,4 +144,6 @@ You have programmed Excel to count whether the value in the mixed cell referen
 
 Presenting validated information clearly and confidently is more important than that [pretty bar chart](https://itsnotaboutthecell.com/2015/10/10/you-dont-owe-anyone-an-explanation/). Remember that you have moved mountains of data and conquered spreadsheets that others dared not touch. You are the Ayatollah of Spreadsheet-Rolla. But, keep that ego in check as nobody wants to work with someone who makes a situation difficult or tries to make them feel technologically inferior. Find ways to use Excel to elevate those around you to make them better. Remember:
 
-### **Excel is your platform, not your purpose.**
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">Excel is your platform, not your purpose.</span>
+</div>

@@ -132,8 +132,9 @@ You are the expert. You are the one that everyone comes to for help. You get pe
 
 * * *
 
-#### So what are you waiting for?
-
-# 86400
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">So what are you waiting for?</span>
+<span class="emphasis-action" style="font-size: 2.5rem;">86400</span>
+</div>
 
 <script type="text/javascript">// <![CDATA[ /*author Philip M. 2010*/ <div></div> var timeInSecs; var ticker; <div></div> function startTimer(secs){ timeInSecs = parseInt(secs)-1; ticker = setInterval("tick()",1000); // every second } <div></div> function tick() { var secs = timeInSecs; if (secs>0) { timeInSecs--; } else { clearInterval(ticker); // stop counting at zero // startTimer(86400); // remove forward slashes in front of startTimer to repeat if required } <div></div> document.getElementById("countdown").innerHTML = secs; } <div></div> startTimer(86400); // 60 seconds // ]]></script>

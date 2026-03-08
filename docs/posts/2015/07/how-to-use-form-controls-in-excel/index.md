@@ -30,7 +30,9 @@ Getting started is as easy as clicking in a square box and typing away on your k
 
 Often we learn by emulating the practices we see in the environment around us. Those in well developed and nurtured environments thrive. Those without available resources, well... they often "**get the job done.**"
 
-# That mentality ends now.
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">That mentality ends now.</span>
+</div>
 
 ## Enable the Developer Tab
 

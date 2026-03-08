@@ -65,11 +65,11 @@ Now that we have a basic understanding of front-end and back-end development as 
 
 * * *
 
-# I AM A DEVELOPER
-
-### **\- - - - - - - - - - - - - - - - - - - - - - - -**
-
-# NOT AN ANALYST
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">I AM A DEVELOPER</span>
+<span class="emphasis-action">— — — — — — — — — — — —</span>
+<span class="emphasis-action">NOT AN ANALYST</span>
+</div>
 
 * * *
 

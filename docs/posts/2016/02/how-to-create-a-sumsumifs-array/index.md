@@ -286,9 +286,10 @@ Just to be **100%** clear, there is absolutely **NO DIFFERENCE** in the final r
 
 * * *
 
-# WORK SMARTER,
-
-# NOT HARDER.
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">WORK SMARTER,</span>
+<span class="emphasis-action">NOT HARDER.</span>
+</div>
 
 * * *
 

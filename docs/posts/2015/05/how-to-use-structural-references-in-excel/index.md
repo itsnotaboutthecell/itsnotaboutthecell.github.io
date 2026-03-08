@@ -71,7 +71,9 @@ There is no humanly possible way you will ever need to look at that 1001th row y
 
 Count to 17,179,869,184 **(1,048,576 rows \* 16,384 columns)**
 
-### **No. Because that's a waste of your time.**
+<div class="emphasis-action-group" markdown>
+<span class="emphasis-action">No. Because that's a waste of your time.</span>
+</div>
 
 When referencing table objects in your formulas it only looks within the table objects boundaries - no more, no less. Too often people are forcing the Excel application to review large ranges of empty cells to determine if values exist thereby killing your workbook's overall potential. That is why I place such a strong emphasis on managing your system's resources  and your end user's experience appropriately.
 
