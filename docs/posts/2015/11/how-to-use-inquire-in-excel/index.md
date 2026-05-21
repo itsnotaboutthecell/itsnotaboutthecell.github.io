@@ -8,16 +8,6 @@ tags:
 comments: true
 ---
 
-It started out innocently: every year needed its own tab, then every month, then every day. Before you knew it, finding "**that one tab**" turned into Legends of The Hidden Temple with [Kirk Fogg yelling directions](https://www.youtube.com/watch?v=9sMTqyLQLIc) at you as you feverishly click about. Enter the Inquire add-in - Microsoft's hidden gem for auditing workbooks so complex they've achieved sentience. Cell relationships, workbook comparisons, formula tracing that [goes to 11](https://www.youtube.com/watch?v=KOO5S4vxi0o). Let's enable it.
-
-<!-- more -->
-
-> "If you can't explain it simply, you don't understand it well enough."
->
-> — Albert Einstein
-
-* * *
-
 It started out innocently: every year needed its own tab, then every month, then every day. Before you knew it, finding "**that one tab**" turned into Legends of The Hidden Temple with Kirk Fogg [yelling directions](https://www.youtube.com/watch?v=9sMTqyLQLIc) at you as you feverishly click about. I understand we are in the age of big data, but by and large, that is the exception and not the rule. From managing the household budget to your kickball team schedule - 99% of what you need to accomplish in Excel can be completed following a simple framework. It's controversial even saying this, but I don't believe any Excel workbook should contain more than 3 tabs.
 
 * * *
